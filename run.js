@@ -1,9 +1,8 @@
-const getFile = require("./src/index");
+// const getFile = require("./src/index");
+const getFile = require("./dist");
 
 (async () => {
-  process.stdout.write("\033[2J");
-  process.stdout.write("\033[0f");
   let ff = await getFile();
   //  let ff = await getFile({ type: "file" });
-  console.info("Console --- ", ff);
+  console.info("Cons", ff);
 })();

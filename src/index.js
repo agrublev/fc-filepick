@@ -1,4 +1,3 @@
-#! /usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const chalk = require("chalk");
@@ -71,33 +70,36 @@ function getFile(config = {}) {
     type = "folder",
     question = `Choose a ${config.type === "folder" ? "folder" : "file"}`
   } = config;
-  return new Promise((resolve, reject) => {
-    let data = [];
-    mountChoices({ folder, type }).then(async choices => {
-      const dir = await prompt(
-        {
-          type: "autocomplete",
-          choices: choices
-        },
-        question
-      );
-      if (type === "folder" && dir.startsWith("--")) {
-        resolve(dir.replace("--", ""));
-      } else if (type !== "folder" && !fs.statSync(dir).isDirectory()) {
-        resolve(dir);
-      } else if (dir.startsWith("~~custom")) {
-        resolve(
-          await prompt(
-            {
-              type: "input"
-            },
-            "Enter custom path"
-          )
+  return new Promise(resolve => {
+    mountChoices({ folder, type })
+      .then(async choices => {
+        const dir = await prompt(
+          {
+            type: "autocomplete",
+            choices: choices
+          },
+          question
         );
-      } else {
-        resolve(getFile({ ...config, folder: dir }));
-      }
-    });
+        if (type === "folder" && dir.startsWith("--")) {
+          resolve(dir.replace("--", ""));
+        } else if (type !== "folder" && !fs.statSync(dir).isDirectory()) {
+          resolve(dir);
+        } else if (dir.startsWith("~~custom")) {
+          resolve(
+            await prompt(
+              {
+                type: "input"
+              },
+              "Enter custom path"
+            )
+          );
+        } else {
+          resolve(getFile({ ...config, folder: dir }));
+        }
+      })
+      .catch(e => {
+        resolve(false);
+      });
   });
 }
 

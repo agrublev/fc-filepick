@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 const { prompt } = require("enquirer");
 const chalk = require("chalk");
 
