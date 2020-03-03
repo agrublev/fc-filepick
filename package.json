@@ -1,38 +1,46 @@
 {
   "name": "fc-filepick",
-  "version": "1.0.0",
-  "description": "File Picker for Command Line Applications",
+  "version": "1.0.3",
+  "description": "File Picker for Command Line Applications using enquirer",
   "main": "dist/index.js",
   "scripts": {
     "start": "nodemon run.js --watch src -I",
-    "build": "parcel build src/index.js --no-cache --target node --bundle-node-modules --no-source-maps",
-    "build:lib": "babel src --ignore 'node_modules' --out-dir dist",
+    "build": "run-s build:bump build:src",
+    "build:bump": "fsr bump",
+    "build:src": "parcel build src/index.js --no-cache --target node --bundle-node-modules --no-source-maps",
+    "release": "run-s build release:npm",
+    "release:npm": "npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Angel Grablev <agrublev@gmail.com>",
-  "keywords": [
-    "filebrowser",
-    "file",
-    "picker",
-    "browser",
-    "cli"
+  "files": [
+    "dist"
   ],
   "repository": "agrublev/fc-filepick",
   "license": "ISC",
+  "keywords": [
+    "browser",
+    "cli",
+    "file",
+    "filebrowser",
+    "picker"
+  ],
+  "author": "Angel Grablev <agrublev@gmail.com>",
   "dependencies": {
     "chalk": "^3.0.0",
     "enquirer": "^2.3.4",
     "prompt": "^1.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2",
-    "@babel/plugin-syntax-class-properties": "^7.2.0",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-transform-runtime": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
+    "@babel/node": "^7.6.3",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-syntax-class-properties": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "@babel/runtime": "^7.5.5",
-    "@babel/node": "^7.6.3"
+    "fscr": "^2.0.2",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5"
   }
 }
