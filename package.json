@@ -1,0 +1,38 @@
+{
+  "name": "fc-filepick",
+  "version": "0.0.1",
+  "description": "File Picker for Command Line Applications",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "nodemon run.js --watch src -I",
+    "build": "babel src --ignore 'node_modules' --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Angel Grablev <agrublev@gmail.com>",
+  "keywords": [
+    "filebrowser",
+    "file",
+    "picker",
+    "browser",
+    "cli"
+  ],
+  "repository": "agrublev/fc-filepick",
+  "license": "ISC",
+  "dependencies": {
+    "clear": "0.0.1",
+    "inquirer": "^3.2.1",
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {
+    "chalk": "^3.0.0",
+    "enquirer": "^2.3.4",
+    "nodemon": "^2.0.2",
+    "@babel/plugin-syntax-class-properties": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.6.3"
+  }
+}
