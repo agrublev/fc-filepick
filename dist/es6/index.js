@@ -1,11 +1,11 @@
-var $jvxZj$events = require("events");
-var $jvxZj$readline = require("readline");
-var $jvxZj$fs = require("fs");
-var $jvxZj$path = require("path");
-var $jvxZj$nodeprocess = require("node:process");
-var $jvxZj$nodeos = require("node:os");
-var $jvxZj$nodetty = require("node:tty");
-var $jvxZj$assert = require("assert");
+import * as $4hQOU$events from "events";
+import {createInterface as $4hQOU$createInterface, emitKeypressEvents as $4hQOU$emitKeypressEvents} from "readline";
+import $4hQOU$fs from "fs";
+import $4hQOU$path from "path";
+import $4hQOU$nodeprocess from "node:process";
+import $4hQOU$nodeos from "node:os";
+import $4hQOU$nodetty from "node:tty";
+import * as $4hQOU$assert from "assert";
 
 
 function $parcel$export(e, n, v, s) {
@@ -14,10 +14,6 @@ function $parcel$export(e, n, v, s) {
 
 function $parcel$interopDefault(a) {
   return a && a.__esModule ? a.default : a;
-}
-
-function $parcel$defineInteropFlag(a) {
-  Object.defineProperty(a, '__esModule', {value: true, configurable: true});
 }
 
       var $parcel$global =
@@ -62,12 +58,12 @@ if (parcelRequire == null) {
 }
 
 var parcelRegister = parcelRequire.register;
-parcelRegister("aPBqx", function(module, exports) {
+parcelRegister("lIsg9", function(module, exports) {
 "use strict";
-const $7e2bb30c58213ec1$var$isHyper = typeof process !== "undefined" && process.env.TERM_PROGRAM === "Hyper";
-const $7e2bb30c58213ec1$var$isWindows = typeof process !== "undefined" && process.platform === "win32";
-const $7e2bb30c58213ec1$var$isLinux = typeof process !== "undefined" && process.platform === "linux";
-const $7e2bb30c58213ec1$var$common = {
+const $fcf3a0cd056b4932$var$isHyper = typeof process !== "undefined" && process.env.TERM_PROGRAM === "Hyper";
+const $fcf3a0cd056b4932$var$isWindows = typeof process !== "undefined" && process.platform === "win32";
+const $fcf3a0cd056b4932$var$isLinux = typeof process !== "undefined" && process.platform === "linux";
+const $fcf3a0cd056b4932$var$common = {
     ballotDisabled: "\u2612",
     ballotOff: "\u2610",
     ballotOn: "\u2611",
@@ -95,7 +91,7 @@ const $7e2bb30c58213ec1$var$common = {
     starsOn: "\u2605",
     upDownArrow: "\u2195"
 };
-const $7e2bb30c58213ec1$var$windows = Object.assign({}, $7e2bb30c58213ec1$var$common, {
+const $fcf3a0cd056b4932$var$windows = Object.assign({}, $fcf3a0cd056b4932$var$common, {
     check: "\u221A",
     cross: "\xd7",
     ellipsisLarge: "...",
@@ -108,7 +104,7 @@ const $7e2bb30c58213ec1$var$windows = Object.assign({}, $7e2bb30c58213ec1$var$co
     radioOn: "(*)",
     warning: "\u203C"
 });
-const $7e2bb30c58213ec1$var$other = Object.assign({}, $7e2bb30c58213ec1$var$common, {
+const $fcf3a0cd056b4932$var$other = Object.assign({}, $fcf3a0cd056b4932$var$common, {
     ballotCross: "\u2718",
     check: "\u2714",
     cross: "\u2716",
@@ -117,57 +113,57 @@ const $7e2bb30c58213ec1$var$other = Object.assign({}, $7e2bb30c58213ec1$var$comm
     info: "\u2139",
     questionFull: "\uFF1F",
     questionSmall: "\uFE56",
-    pointer: $7e2bb30c58213ec1$var$isLinux ? "\u25B8" : "\u276F",
-    pointerSmall: $7e2bb30c58213ec1$var$isLinux ? "\u2023" : "\u203A",
+    pointer: $fcf3a0cd056b4932$var$isLinux ? "\u25B8" : "\u276F",
+    pointerSmall: $fcf3a0cd056b4932$var$isLinux ? "\u2023" : "\u203A",
     radioOff: "\u25EF",
     radioOn: "\u25C9",
     warning: "\u26A0"
 });
-module.exports = $7e2bb30c58213ec1$var$isWindows && !$7e2bb30c58213ec1$var$isHyper ? $7e2bb30c58213ec1$var$windows : $7e2bb30c58213ec1$var$other;
+module.exports = $fcf3a0cd056b4932$var$isWindows && !$fcf3a0cd056b4932$var$isHyper ? $fcf3a0cd056b4932$var$windows : $fcf3a0cd056b4932$var$other;
 Reflect.defineProperty(module.exports, "common", {
     enumerable: false,
-    value: $7e2bb30c58213ec1$var$common
+    value: $fcf3a0cd056b4932$var$common
 });
 Reflect.defineProperty(module.exports, "windows", {
     enumerable: false,
-    value: $7e2bb30c58213ec1$var$windows
+    value: $fcf3a0cd056b4932$var$windows
 });
 Reflect.defineProperty(module.exports, "other", {
     enumerable: false,
-    value: $7e2bb30c58213ec1$var$other
+    value: $fcf3a0cd056b4932$var$other
 });
 
 });
 
-parcelRegister("aQOyv", function(module, exports) {
+parcelRegister("3fCUp", function(module, exports) {
 "use strict";
 
 
-var $6jmOe = parcelRequire("6jmOe");
+var $kCxMd = parcelRequire("kCxMd");
 
-var $7veJH = parcelRequire("7veJH");
+var $iZUzo = parcelRequire("iZUzo");
 
-var $fTHPT = parcelRequire("fTHPT");
+var $gu3hI = parcelRequire("gu3hI");
 
-var $7yTan = parcelRequire("7yTan");
+var $9GwC6 = parcelRequire("9GwC6");
 
-var $bpn0n = parcelRequire("bpn0n");
+var $bk3cM = parcelRequire("bk3cM");
 
-var $k7DM2 = parcelRequire("k7DM2");
+var $h91fL = parcelRequire("h91fL");
 
-var $b3z4b = parcelRequire("b3z4b");
+var $fo01Y = parcelRequire("fo01Y");
 /**
  * Base class for creating a new Prompt.
  * @param {Object} `options` Question object.
- */ class $7e65fa010524af4f$var$Prompt extends $jvxZj$events {
+ */ class $25e0f44ba7e8ffd4$var$Prompt extends $4hQOU$events {
     constructor(options = {}){
         super();
         this.name = options.name;
         this.type = options.type;
         this.options = options;
-        $bpn0n(this);
-        $fTHPT(this);
-        this.state = new $7yTan(this);
+        $bk3cM(this);
+        $gu3hI(this);
+        this.state = new $9GwC6(this);
         this.initial = [
             options.initial,
             options.default
@@ -176,13 +172,13 @@ var $b3z4b = parcelRequire("b3z4b");
         this.stdin = options.stdin || process.stdin;
         this.scale = options.scale || 1;
         this.term = this.options.term || process.env.TERM_PROGRAM;
-        this.margin = $7e65fa010524af4f$var$margin(this.options.margin);
+        this.margin = $25e0f44ba7e8ffd4$var$margin(this.options.margin);
         this.setMaxListeners(0);
-        $7e65fa010524af4f$var$setOptions(this);
+        $25e0f44ba7e8ffd4$var$setOptions(this);
     }
     async keypress(input, event = {}) {
         this.keypressed = true;
-        let key = $7veJH.action(input, $7veJH(input, event), this.options.actions);
+        let key = $iZUzo.action(input, $iZUzo(input, event), this.options.actions);
         this.state.keypress = key;
         this.emit("keypress", input, key);
         this.emit("state", this.state.clone());
@@ -193,18 +189,18 @@ var $b3z4b = parcelRequire("b3z4b");
     alert() {
         delete this.state.alert;
         if (this.options.show === false) this.emit("alert");
-        else this.stdout.write($b3z4b.code.beep);
+        else this.stdout.write($fo01Y.code.beep);
     }
     cursorHide() {
-        this.stdout.write($b3z4b.cursor.hide());
-        const releaseOnExit = $k7DM2.onExit(()=>this.cursorShow());
+        this.stdout.write($fo01Y.cursor.hide());
+        const releaseOnExit = $h91fL.onExit(()=>this.cursorShow());
         this.on("close", ()=>{
             this.cursorShow();
             releaseOnExit();
         });
     }
     cursorShow() {
-        this.stdout.write($b3z4b.cursor.show());
+        this.stdout.write($fo01Y.cursor.show());
     }
     write(str) {
         if (!str) return;
@@ -215,7 +211,7 @@ var $b3z4b = parcelRequire("b3z4b");
         let buffer = this.state.buffer;
         this.state.buffer = "";
         if (!buffer && !lines || this.options.show === false) return;
-        this.stdout.write($b3z4b.cursor.down(lines) + $b3z4b.clear(buffer, this.width));
+        this.stdout.write($fo01Y.cursor.down(lines) + $fo01Y.clear(buffer, this.width));
     }
     restore() {
         if (this.state.closed || this.options.show === false) return;
@@ -231,13 +227,13 @@ var $b3z4b = parcelRequire("b3z4b");
             size: size,
             value: value
         };
-        let codes = $b3z4b.cursor.restore(state);
+        let codes = $fo01Y.cursor.restore(state);
         if (codes) this.stdout.write(codes);
     }
     sections() {
         let { buffer: buffer, input: input, prompt: prompt } = this.state;
-        prompt = $6jmOe(prompt);
-        let buf = $6jmOe(buffer);
+        prompt = $kCxMd(prompt);
+        let buf = $kCxMd(buffer);
         let idx = buf.indexOf(prompt);
         let header = buf.slice(0, idx);
         let rest = buf.slice(idx);
@@ -293,14 +289,14 @@ var $b3z4b = parcelRequire("b3z4b");
         try {
             let sections = this.sections();
             let lines = Math.ceil(sections.prompt.length / this.width);
-            if (sections.rest) this.write($b3z4b.cursor.down(sections.rest.length));
+            if (sections.rest) this.write($fo01Y.cursor.down(sections.rest.length));
             this.write("\n".repeat(lines));
         } catch (err) {}
         this.emit("close");
     }
     start() {
         if (!this.stop && this.options.show !== false) {
-            this.stop = $7veJH.listen(this, this.keypress.bind(this));
+            this.stop = $iZUzo.listen(this, this.keypress.bind(this));
             this.once("close", this.stop);
             this.emit("start", this);
         }
@@ -362,8 +358,8 @@ var $b3z4b = parcelRequire("b3z4b");
         let timer = this.timers && this.timers.prefix;
         let state = this.state;
         state.timer = timer;
-        if ($k7DM2.isObject(element)) element = element[state.status] || element.pending;
-        if (!$k7DM2.hasColor(element)) {
+        if ($h91fL.isObject(element)) element = element[state.status] || element.pending;
+        if (!$h91fL.hasColor(element)) {
             let style = this.styles[state.status] || this.styles.pending;
             return style(element);
         }
@@ -371,7 +367,7 @@ var $b3z4b = parcelRequire("b3z4b");
     }
     async message() {
         let message = await this.element("message");
-        if (!$k7DM2.hasColor(message)) return this.styles.strong(message);
+        if (!$h91fL.hasColor(message)) return this.styles.strong(message);
         return message;
     }
     async separator() {
@@ -381,31 +377,31 @@ var $b3z4b = parcelRequire("b3z4b");
         state.timer = timer;
         let value = element[state.status] || element.pending || state.separator;
         let ele = await this.resolve(value, state);
-        if ($k7DM2.isObject(ele)) ele = ele[state.status] || ele.pending;
-        if (!$k7DM2.hasColor(ele)) return this.styles.muted(ele);
+        if ($h91fL.isObject(ele)) ele = ele[state.status] || ele.pending;
+        if (!$h91fL.hasColor(ele)) return this.styles.muted(ele);
         return ele;
     }
     async pointer(choice, i) {
         let val = await this.element("pointer", choice, i);
-        if (typeof val === "string" && $k7DM2.hasColor(val)) return val;
+        if (typeof val === "string" && $h91fL.hasColor(val)) return val;
         if (val) {
             let styles = this.styles;
             let focused = this.index === i;
             let style = focused ? styles.primary : (val)=>val;
             let ele = await this.resolve(val[focused ? "on" : "off"] || val, this.state);
-            let styled = !$k7DM2.hasColor(ele) ? style(ele) : ele;
+            let styled = !$h91fL.hasColor(ele) ? style(ele) : ele;
             return focused ? styled : " ".repeat(ele.length);
         }
     }
     async indicator(choice, i) {
         let val = await this.element("indicator", choice, i);
-        if (typeof val === "string" && $k7DM2.hasColor(val)) return val;
+        if (typeof val === "string" && $h91fL.hasColor(val)) return val;
         if (val) {
             let styles = this.styles;
             let enabled = choice.enabled === true;
             let style = enabled ? styles.success : styles.dark;
             let ele = val[enabled ? "on" : "off"] || val;
-            return !$k7DM2.hasColor(ele) ? style(ele) : ele;
+            return !$h91fL.hasColor(ele) ? style(ele) : ele;
         }
         return "";
     }
@@ -421,7 +417,7 @@ var $b3z4b = parcelRequire("b3z4b");
     async hint() {
         if (this.state.status === "pending" && !this.isValue(this.state.input)) {
             let hint = await this.element("hint");
-            if (!$k7DM2.hasColor(hint)) return this.styles.muted(hint);
+            if (!$h91fL.hasColor(hint)) return this.styles.muted(hint);
             return hint;
         }
     }
@@ -442,19 +438,19 @@ var $b3z4b = parcelRequire("b3z4b");
         return value != null && value !== "";
     }
     resolve(value, ...args) {
-        return $k7DM2.resolve(this, value, ...args);
+        return $h91fL.resolve(this, value, ...args);
     }
     get base() {
-        return $7e65fa010524af4f$var$Prompt.prototype;
+        return $25e0f44ba7e8ffd4$var$Prompt.prototype;
     }
     get style() {
         return this.styles[this.state.status];
     }
     get height() {
-        return this.options.rows || $k7DM2.height(this.stdout, 25);
+        return this.options.rows || $h91fL.height(this.stdout, 25);
     }
     get width() {
-        return this.options.columns || $k7DM2.width(this.stdout, 80);
+        return this.options.columns || $h91fL.width(this.stdout, 80);
     }
     get size() {
         return {
@@ -489,7 +485,7 @@ var $b3z4b = parcelRequire("b3z4b");
         return (options)=>new this(options).run();
     }
 }
-function $7e65fa010524af4f$var$setOptions(prompt) {
+function $25e0f44ba7e8ffd4$var$setOptions(prompt) {
     let isValidKey = (key)=>{
         return prompt[key] === void 0 || typeof prompt[key] === "function";
     };
@@ -526,7 +522,7 @@ function $7e65fa010524af4f$var$setOptions(prompt) {
         } else if (typeof prompt[key] !== "function") prompt[key] = option;
     }
 }
-function $7e65fa010524af4f$var$margin(value) {
+function $25e0f44ba7e8ffd4$var$margin(value) {
     if (typeof value === "number") value = [
         value,
         value,
@@ -543,17 +539,17 @@ function $7e65fa010524af4f$var$margin(value) {
     }
     return res;
 }
-module.exports = $7e65fa010524af4f$var$Prompt;
+module.exports = $25e0f44ba7e8ffd4$var$Prompt;
 
 });
-parcelRegister("6jmOe", function(module, exports) {
+parcelRegister("kCxMd", function(module, exports) {
 "use strict";
 
-var $jSZgd = parcelRequire("jSZgd");
-module.exports = (string)=>typeof string === "string" ? string.replace($jSZgd(), "") : string;
+var $fQdSh = parcelRequire("fQdSh");
+module.exports = (string)=>typeof string === "string" ? string.replace($fQdSh(), "") : string;
 
 });
-parcelRegister("jSZgd", function(module, exports) {
+parcelRegister("fQdSh", function(module, exports) {
 "use strict";
 module.exports = ({ onlyFirst: onlyFirst = false } = {})=>{
     const pattern = [
@@ -566,16 +562,16 @@ module.exports = ({ onlyFirst: onlyFirst = false } = {})=>{
 });
 
 
-parcelRegister("7veJH", function(module, exports) {
+parcelRegister("iZUzo", function(module, exports) {
 "use strict";
 
 
-var $2lzOT = parcelRequire("2lzOT");
+var $8OcYO = parcelRequire("8OcYO");
 
-var $fywuG = parcelRequire("fywuG");
-/* eslint-disable no-control-regex */ const $5766dbf0e36c06f5$var$metaKeyCodeRe = /^(?:\x1b)([a-zA-Z0-9])$/;
-const $5766dbf0e36c06f5$var$fnKeyRe = /^(?:\x1b+)(O|N|\[|\[\[)(?:(\d+)(?:;(\d+))?([~^$])|(?:1;)?(\d+)?([a-zA-Z]))/;
-const $5766dbf0e36c06f5$var$keyName = {
+var $79wK4 = parcelRequire("79wK4");
+/* eslint-disable no-control-regex */ const $dd49ce1c96380f40$var$metaKeyCodeRe = /^(?:\x1b)([a-zA-Z0-9])$/;
+const $dd49ce1c96380f40$var$fnKeyRe = /^(?:\x1b+)(O|N|\[|\[\[)(?:(\d+)(?:;(\d+))?([~^$])|(?:1;)?(\d+)?([a-zA-Z]))/;
+const $dd49ce1c96380f40$var$keyName = {
     /* xterm/gnome ESC O letter */ "OP": "f1",
     "OQ": "f2",
     "OR": "f3",
@@ -645,7 +641,7 @@ const $5766dbf0e36c06f5$var$keyName = {
     "[8^": "end",
     /* misc. */ "[Z": "tab"
 };
-function $5766dbf0e36c06f5$var$isShiftKey(code) {
+function $dd49ce1c96380f40$var$isShiftKey(code) {
     return [
         "[a",
         "[b",
@@ -661,7 +657,7 @@ function $5766dbf0e36c06f5$var$isShiftKey(code) {
         "[Z"
     ].includes(code);
 }
-function $5766dbf0e36c06f5$var$isCtrlKey(code) {
+function $dd49ce1c96380f40$var$isCtrlKey(code) {
     return [
         "Oa",
         "Ob",
@@ -676,7 +672,7 @@ function $5766dbf0e36c06f5$var$isCtrlKey(code) {
         "[8^"
     ].includes(code);
 }
-const $5766dbf0e36c06f5$var$keypress = (s = "", event = {})=>{
+const $dd49ce1c96380f40$var$keypress = (s = "", event = {})=>{
     let parts;
     let key = {
         name: event.name,
@@ -727,11 +723,11 @@ const $5766dbf0e36c06f5$var$keypress = (s = "", event = {})=>{
         // shift+letter
         key.name = s.toLowerCase();
         key.shift = true;
-    } else if (parts = $5766dbf0e36c06f5$var$metaKeyCodeRe.exec(s)) {
+    } else if (parts = $dd49ce1c96380f40$var$metaKeyCodeRe.exec(s)) {
         // meta+character key
         key.meta = true;
         key.shift = /^[A-Z]$/.test(parts[1]);
-    } else if (parts = $5766dbf0e36c06f5$var$fnKeyRe.exec(s)) {
+    } else if (parts = $dd49ce1c96380f40$var$fnKeyRe.exec(s)) {
         let segs = [
             ...s
         ];
@@ -751,21 +747,21 @@ const $5766dbf0e36c06f5$var$keypress = (s = "", event = {})=>{
         key.meta = !!(modifier & 10);
         key.shift = !!(modifier & 1);
         key.code = code;
-        key.name = $5766dbf0e36c06f5$var$keyName[code];
-        key.shift = $5766dbf0e36c06f5$var$isShiftKey(code) || key.shift;
-        key.ctrl = $5766dbf0e36c06f5$var$isCtrlKey(code) || key.ctrl;
+        key.name = $dd49ce1c96380f40$var$keyName[code];
+        key.shift = $dd49ce1c96380f40$var$isShiftKey(code) || key.shift;
+        key.ctrl = $dd49ce1c96380f40$var$isCtrlKey(code) || key.ctrl;
     }
     return key;
 };
-$5766dbf0e36c06f5$var$keypress.listen = (options = {}, onKeypress)=>{
+$dd49ce1c96380f40$var$keypress.listen = (options = {}, onKeypress)=>{
     let { stdin: stdin } = options;
     if (!stdin || stdin !== process.stdin && !stdin.isTTY) throw new Error("Invalid stream passed");
-    let rl = $jvxZj$readline.createInterface({
+    let rl = $4hQOU$createInterface({
         terminal: true,
         input: stdin
     });
-    $jvxZj$readline.emitKeypressEvents(stdin, rl);
-    const queue = new $fywuG((buf, key)=>onKeypress(buf, $5766dbf0e36c06f5$var$keypress(buf, key), rl));
+    $4hQOU$emitKeypressEvents(stdin, rl);
+    const queue = new $79wK4((buf, key)=>onKeypress(buf, $dd49ce1c96380f40$var$keypress(buf, key), rl));
     let isRaw = stdin.isRaw;
     if (stdin.isTTY) stdin.setRawMode(true);
     stdin.on("keypress", queue.enqueue);
@@ -779,9 +775,9 @@ $5766dbf0e36c06f5$var$keypress.listen = (options = {}, onKeypress)=>{
     };
     return off;
 };
-$5766dbf0e36c06f5$var$keypress.action = (buf, key, customActions)=>{
+$dd49ce1c96380f40$var$keypress.action = (buf, key, customActions)=>{
     let obj = {
-        ...$2lzOT,
+        ...$8OcYO,
         ...customActions
     };
     if (key.ctrl) {
@@ -799,27 +795,27 @@ $5766dbf0e36c06f5$var$keypress.action = (buf, key, customActions)=>{
     key.action = obj.keys[key.name];
     return key;
 };
-module.exports = $5766dbf0e36c06f5$var$keypress;
+module.exports = $dd49ce1c96380f40$var$keypress;
 
 });
-parcelRegister("2lzOT", function(module, exports) {
+parcelRegister("8OcYO", function(module, exports) {
 
-$parcel$export(module.exports, "ctrl", () => $1b5954074c921940$export$2d45dbccb79e5305, (v) => $1b5954074c921940$export$2d45dbccb79e5305 = v);
-$parcel$export(module.exports, "shift", () => $1b5954074c921940$export$fba63a578e423eb, (v) => $1b5954074c921940$export$fba63a578e423eb = v);
-$parcel$export(module.exports, "fn", () => $1b5954074c921940$export$edf0a6961c7cffcc, (v) => $1b5954074c921940$export$edf0a6961c7cffcc = v);
-$parcel$export(module.exports, "option", () => $1b5954074c921940$export$a75d1723e6bda2ec, (v) => $1b5954074c921940$export$a75d1723e6bda2ec = v);
-$parcel$export(module.exports, "keys", () => $1b5954074c921940$export$ed97f33186d4b816, (v) => $1b5954074c921940$export$ed97f33186d4b816 = v);
+$parcel$export(module.exports, "ctrl", () => $669d0fca10f1359e$export$2d45dbccb79e5305, (v) => $669d0fca10f1359e$export$2d45dbccb79e5305 = v);
+$parcel$export(module.exports, "shift", () => $669d0fca10f1359e$export$fba63a578e423eb, (v) => $669d0fca10f1359e$export$fba63a578e423eb = v);
+$parcel$export(module.exports, "fn", () => $669d0fca10f1359e$export$edf0a6961c7cffcc, (v) => $669d0fca10f1359e$export$edf0a6961c7cffcc = v);
+$parcel$export(module.exports, "option", () => $669d0fca10f1359e$export$a75d1723e6bda2ec, (v) => $669d0fca10f1359e$export$a75d1723e6bda2ec = v);
+$parcel$export(module.exports, "keys", () => $669d0fca10f1359e$export$ed97f33186d4b816, (v) => $669d0fca10f1359e$export$ed97f33186d4b816 = v);
 /**
  * Actions are mappings from keypress event names to method names
  * in the prompts.
- */ var $1b5954074c921940$export$2d45dbccb79e5305;
-var $1b5954074c921940$export$fba63a578e423eb;
-var $1b5954074c921940$export$edf0a6961c7cffcc;
+ */ var $669d0fca10f1359e$export$2d45dbccb79e5305;
+var $669d0fca10f1359e$export$fba63a578e423eb;
+var $669d0fca10f1359e$export$edf0a6961c7cffcc;
 // <alt> on Windows
-var $1b5954074c921940$export$a75d1723e6bda2ec;
-var $1b5954074c921940$export$ed97f33186d4b816;
+var $669d0fca10f1359e$export$a75d1723e6bda2ec;
+var $669d0fca10f1359e$export$ed97f33186d4b816;
 "use strict";
-$1b5954074c921940$export$2d45dbccb79e5305 = {
+$669d0fca10f1359e$export$2d45dbccb79e5305 = {
     a: "first",
     b: "backward",
     c: "cancel",
@@ -841,21 +837,21 @@ $1b5954074c921940$export$2d45dbccb79e5305 = {
     x: "toggleCursor",
     v: "paste"
 };
-$1b5954074c921940$export$fba63a578e423eb = {
+$669d0fca10f1359e$export$fba63a578e423eb = {
     up: "shiftUp",
     down: "shiftDown",
     left: "shiftLeft",
     right: "shiftRight",
     tab: "prev"
 };
-$1b5954074c921940$export$edf0a6961c7cffcc = {
+$669d0fca10f1359e$export$edf0a6961c7cffcc = {
     up: "pageUp",
     down: "pageDown",
     left: "pageLeft",
     right: "pageRight",
     delete: "deleteForward"
 };
-$1b5954074c921940$export$a75d1723e6bda2ec = {
+$669d0fca10f1359e$export$a75d1723e6bda2ec = {
     b: "backward",
     f: "forward",
     d: "cutRight",
@@ -863,7 +859,7 @@ $1b5954074c921940$export$a75d1723e6bda2ec = {
     up: "altUp",
     down: "altDown"
 };
-$1b5954074c921940$export$ed97f33186d4b816 = {
+$669d0fca10f1359e$export$ed97f33186d4b816 = {
     pageup: "pageUp",
     pagedown: "pageDown",
     home: "home",
@@ -885,7 +881,7 @@ $1b5954074c921940$export$ed97f33186d4b816 = {
 
 });
 
-parcelRegister("fywuG", function(module, exports) {
+parcelRegister("79wK4", function(module, exports) {
 "use strict";
 module.exports = class Queue {
     _queue = [];
@@ -916,7 +912,7 @@ module.exports = class Queue {
 });
 
 
-parcelRegister("fTHPT", function(module, exports) {
+parcelRegister("gu3hI", function(module, exports) {
 "use strict";
 module.exports = (prompt)=>{
     prompt.timers = prompt.timers || {};
@@ -927,10 +923,10 @@ module.exports = (prompt)=>{
         if (typeof opts === "number") opts = {
             interval: opts
         };
-        $b92dfef877f870ab$var$create(prompt, key, opts);
+        $c001fef884477432$var$create(prompt, key, opts);
     }
 };
-function $b92dfef877f870ab$var$create(prompt, name, options = {}) {
+function $c001fef884477432$var$create(prompt, name, options = {}) {
     let timer = prompt.timers[name] = {
         name: name,
         start: Date.now(),
@@ -958,16 +954,16 @@ function $b92dfef877f870ab$var$create(prompt, name, options = {}) {
 
 });
 
-parcelRegister("7yTan", function(module, exports) {
+parcelRegister("9GwC6", function(module, exports) {
 "use strict";
 
-var $k7DM2 = parcelRequire("k7DM2");
-var $58168043af564204$require$define = $k7DM2.define;
-var $58168043af564204$require$width = $k7DM2.width;
-class $58168043af564204$var$State {
+var $h91fL = parcelRequire("h91fL");
+var $70d155acc66ab1dc$require$define = $h91fL.define;
+var $70d155acc66ab1dc$require$width = $h91fL.width;
+class $70d155acc66ab1dc$var$State {
     constructor(prompt){
         let options = prompt.options;
-        $58168043af564204$require$define(this, "_prompt", prompt);
+        $70d155acc66ab1dc$require$define(this, "_prompt", prompt);
         this.type = prompt.type;
         this.name = prompt.name;
         this.message = "";
@@ -982,7 +978,7 @@ class $58168043af564204$var$State {
         this.tick = 0;
         this.prompt = "";
         this.buffer = "";
-        this.width = $58168043af564204$require$width(options.stdout || process.stdout);
+        this.width = $70d155acc66ab1dc$require$width(options.stdout || process.stdout);
         Object.assign(this, options);
         this.name = this.name || this.message;
         this.message = this.message || this.name;
@@ -1025,81 +1021,81 @@ class $58168043af564204$var$State {
         return "pending";
     }
 }
-module.exports = $58168043af564204$var$State;
+module.exports = $70d155acc66ab1dc$var$State;
 
 });
-parcelRegister("k7DM2", function(module, exports) {
+parcelRegister("h91fL", function(module, exports) {
 
-$parcel$export(module.exports, "longest", () => $ea635059d2dab512$export$2cd9c620e2322b11, (v) => $ea635059d2dab512$export$2cd9c620e2322b11 = v);
-$parcel$export(module.exports, "hasColor", () => $ea635059d2dab512$export$4f0196bc582f3c34, (v) => $ea635059d2dab512$export$4f0196bc582f3c34 = v);
-$parcel$export(module.exports, "isObject", () => $ea635059d2dab512$export$a6cdc56e425d0d0a, (v) => $ea635059d2dab512$export$a6cdc56e425d0d0a = v);
-$parcel$export(module.exports, "nativeType", () => $ea635059d2dab512$export$4cfafb42c91880c2, (v) => $ea635059d2dab512$export$4cfafb42c91880c2 = v);
-$parcel$export(module.exports, "isAsyncFn", () => $ea635059d2dab512$export$a18515a8376ae56, (v) => $ea635059d2dab512$export$a18515a8376ae56 = v);
-$parcel$export(module.exports, "isPrimitive", () => $ea635059d2dab512$export$c3825b437cbdea5c, (v) => $ea635059d2dab512$export$c3825b437cbdea5c = v);
-$parcel$export(module.exports, "resolve", () => $ea635059d2dab512$export$f7ad0328861e2f03, (v) => $ea635059d2dab512$export$f7ad0328861e2f03 = v);
-$parcel$export(module.exports, "scrollDown", () => $ea635059d2dab512$export$de29947b9a3b69c4, (v) => $ea635059d2dab512$export$de29947b9a3b69c4 = v);
-$parcel$export(module.exports, "scrollUp", () => $ea635059d2dab512$export$aae9d402fb2f2acd, (v) => $ea635059d2dab512$export$aae9d402fb2f2acd = v);
-$parcel$export(module.exports, "reorder", () => $ea635059d2dab512$export$fc77a6137e3f91c, (v) => $ea635059d2dab512$export$fc77a6137e3f91c = v);
-$parcel$export(module.exports, "swap", () => $ea635059d2dab512$export$b0e76d9850c64156, (v) => $ea635059d2dab512$export$b0e76d9850c64156 = v);
-$parcel$export(module.exports, "width", () => $ea635059d2dab512$export$7e3df82ee760448c, (v) => $ea635059d2dab512$export$7e3df82ee760448c = v);
-$parcel$export(module.exports, "height", () => $ea635059d2dab512$export$ac607276a8fe9f0a, (v) => $ea635059d2dab512$export$ac607276a8fe9f0a = v);
-$parcel$export(module.exports, "wordWrap", () => $ea635059d2dab512$export$dca3d8ad656c34d2, (v) => $ea635059d2dab512$export$dca3d8ad656c34d2 = v);
-$parcel$export(module.exports, "unmute", () => $ea635059d2dab512$export$980e8f800f2aa0d8, (v) => $ea635059d2dab512$export$980e8f800f2aa0d8 = v);
-$parcel$export(module.exports, "pascal", () => $ea635059d2dab512$export$b78eb6578ba92547, (v) => $ea635059d2dab512$export$b78eb6578ba92547 = v);
-$parcel$export(module.exports, "inverse", () => $ea635059d2dab512$export$70ae2c07e401031b, (v) => $ea635059d2dab512$export$70ae2c07e401031b = v);
-$parcel$export(module.exports, "complement", () => $ea635059d2dab512$export$bd4f6f7e1823bc9e, (v) => $ea635059d2dab512$export$bd4f6f7e1823bc9e = v);
-$parcel$export(module.exports, "meridiem", () => $ea635059d2dab512$export$59d9f6a8e797ecde, (v) => $ea635059d2dab512$export$59d9f6a8e797ecde = v);
-$parcel$export(module.exports, "set", () => $ea635059d2dab512$export$adaa4cf7ef1b65be, (v) => $ea635059d2dab512$export$adaa4cf7ef1b65be = v);
-$parcel$export(module.exports, "get", () => $ea635059d2dab512$export$3988ae62b71be9a3, (v) => $ea635059d2dab512$export$3988ae62b71be9a3 = v);
-$parcel$export(module.exports, "mixin", () => $ea635059d2dab512$export$e36fc9d62a853069, (v) => $ea635059d2dab512$export$e36fc9d62a853069 = v);
-$parcel$export(module.exports, "merge", () => $ea635059d2dab512$export$4950aa0f605343fb, (v) => $ea635059d2dab512$export$4950aa0f605343fb = v);
-$parcel$export(module.exports, "mixinEmitter", () => $ea635059d2dab512$export$792940db1c9e591d, (v) => $ea635059d2dab512$export$792940db1c9e591d = v);
-$parcel$export(module.exports, "define", () => $ea635059d2dab512$export$f36d6a7a5c09a23e, (v) => $ea635059d2dab512$export$f36d6a7a5c09a23e = v);
-$parcel$export(module.exports, "onExit", () => $ea635059d2dab512$export$47a57ed64c292d4f, (v) => $ea635059d2dab512$export$47a57ed64c292d4f = v);
-$parcel$export(module.exports, "defineExport", () => $ea635059d2dab512$export$c04f1882ebfe07d5, (v) => $ea635059d2dab512$export$c04f1882ebfe07d5 = v);
-var $ea635059d2dab512$export$2cd9c620e2322b11;
-var $ea635059d2dab512$export$4f0196bc582f3c34;
-var $ea635059d2dab512$export$a6cdc56e425d0d0a;
-var $ea635059d2dab512$export$4cfafb42c91880c2;
-var $ea635059d2dab512$export$a18515a8376ae56;
-var $ea635059d2dab512$export$c3825b437cbdea5c;
-var $ea635059d2dab512$export$f7ad0328861e2f03;
-var $ea635059d2dab512$export$de29947b9a3b69c4;
-var $ea635059d2dab512$export$aae9d402fb2f2acd;
-var $ea635059d2dab512$export$fc77a6137e3f91c;
-var $ea635059d2dab512$export$b0e76d9850c64156;
-var $ea635059d2dab512$export$7e3df82ee760448c;
-var $ea635059d2dab512$export$ac607276a8fe9f0a;
-var $ea635059d2dab512$export$dca3d8ad656c34d2;
-var $ea635059d2dab512$export$980e8f800f2aa0d8;
-var $ea635059d2dab512$export$b78eb6578ba92547;
-var $ea635059d2dab512$export$70ae2c07e401031b;
-var $ea635059d2dab512$export$bd4f6f7e1823bc9e;
-var $ea635059d2dab512$export$59d9f6a8e797ecde;
+$parcel$export(module.exports, "longest", () => $c7b43fcb785e4aea$export$2cd9c620e2322b11, (v) => $c7b43fcb785e4aea$export$2cd9c620e2322b11 = v);
+$parcel$export(module.exports, "hasColor", () => $c7b43fcb785e4aea$export$4f0196bc582f3c34, (v) => $c7b43fcb785e4aea$export$4f0196bc582f3c34 = v);
+$parcel$export(module.exports, "isObject", () => $c7b43fcb785e4aea$export$a6cdc56e425d0d0a, (v) => $c7b43fcb785e4aea$export$a6cdc56e425d0d0a = v);
+$parcel$export(module.exports, "nativeType", () => $c7b43fcb785e4aea$export$4cfafb42c91880c2, (v) => $c7b43fcb785e4aea$export$4cfafb42c91880c2 = v);
+$parcel$export(module.exports, "isAsyncFn", () => $c7b43fcb785e4aea$export$a18515a8376ae56, (v) => $c7b43fcb785e4aea$export$a18515a8376ae56 = v);
+$parcel$export(module.exports, "isPrimitive", () => $c7b43fcb785e4aea$export$c3825b437cbdea5c, (v) => $c7b43fcb785e4aea$export$c3825b437cbdea5c = v);
+$parcel$export(module.exports, "resolve", () => $c7b43fcb785e4aea$export$f7ad0328861e2f03, (v) => $c7b43fcb785e4aea$export$f7ad0328861e2f03 = v);
+$parcel$export(module.exports, "scrollDown", () => $c7b43fcb785e4aea$export$de29947b9a3b69c4, (v) => $c7b43fcb785e4aea$export$de29947b9a3b69c4 = v);
+$parcel$export(module.exports, "scrollUp", () => $c7b43fcb785e4aea$export$aae9d402fb2f2acd, (v) => $c7b43fcb785e4aea$export$aae9d402fb2f2acd = v);
+$parcel$export(module.exports, "reorder", () => $c7b43fcb785e4aea$export$fc77a6137e3f91c, (v) => $c7b43fcb785e4aea$export$fc77a6137e3f91c = v);
+$parcel$export(module.exports, "swap", () => $c7b43fcb785e4aea$export$b0e76d9850c64156, (v) => $c7b43fcb785e4aea$export$b0e76d9850c64156 = v);
+$parcel$export(module.exports, "width", () => $c7b43fcb785e4aea$export$7e3df82ee760448c, (v) => $c7b43fcb785e4aea$export$7e3df82ee760448c = v);
+$parcel$export(module.exports, "height", () => $c7b43fcb785e4aea$export$ac607276a8fe9f0a, (v) => $c7b43fcb785e4aea$export$ac607276a8fe9f0a = v);
+$parcel$export(module.exports, "wordWrap", () => $c7b43fcb785e4aea$export$dca3d8ad656c34d2, (v) => $c7b43fcb785e4aea$export$dca3d8ad656c34d2 = v);
+$parcel$export(module.exports, "unmute", () => $c7b43fcb785e4aea$export$980e8f800f2aa0d8, (v) => $c7b43fcb785e4aea$export$980e8f800f2aa0d8 = v);
+$parcel$export(module.exports, "pascal", () => $c7b43fcb785e4aea$export$b78eb6578ba92547, (v) => $c7b43fcb785e4aea$export$b78eb6578ba92547 = v);
+$parcel$export(module.exports, "inverse", () => $c7b43fcb785e4aea$export$70ae2c07e401031b, (v) => $c7b43fcb785e4aea$export$70ae2c07e401031b = v);
+$parcel$export(module.exports, "complement", () => $c7b43fcb785e4aea$export$bd4f6f7e1823bc9e, (v) => $c7b43fcb785e4aea$export$bd4f6f7e1823bc9e = v);
+$parcel$export(module.exports, "meridiem", () => $c7b43fcb785e4aea$export$59d9f6a8e797ecde, (v) => $c7b43fcb785e4aea$export$59d9f6a8e797ecde = v);
+$parcel$export(module.exports, "set", () => $c7b43fcb785e4aea$export$adaa4cf7ef1b65be, (v) => $c7b43fcb785e4aea$export$adaa4cf7ef1b65be = v);
+$parcel$export(module.exports, "get", () => $c7b43fcb785e4aea$export$3988ae62b71be9a3, (v) => $c7b43fcb785e4aea$export$3988ae62b71be9a3 = v);
+$parcel$export(module.exports, "mixin", () => $c7b43fcb785e4aea$export$e36fc9d62a853069, (v) => $c7b43fcb785e4aea$export$e36fc9d62a853069 = v);
+$parcel$export(module.exports, "merge", () => $c7b43fcb785e4aea$export$4950aa0f605343fb, (v) => $c7b43fcb785e4aea$export$4950aa0f605343fb = v);
+$parcel$export(module.exports, "mixinEmitter", () => $c7b43fcb785e4aea$export$792940db1c9e591d, (v) => $c7b43fcb785e4aea$export$792940db1c9e591d = v);
+$parcel$export(module.exports, "define", () => $c7b43fcb785e4aea$export$f36d6a7a5c09a23e, (v) => $c7b43fcb785e4aea$export$f36d6a7a5c09a23e = v);
+$parcel$export(module.exports, "onExit", () => $c7b43fcb785e4aea$export$47a57ed64c292d4f, (v) => $c7b43fcb785e4aea$export$47a57ed64c292d4f = v);
+$parcel$export(module.exports, "defineExport", () => $c7b43fcb785e4aea$export$c04f1882ebfe07d5, (v) => $c7b43fcb785e4aea$export$c04f1882ebfe07d5 = v);
+var $c7b43fcb785e4aea$export$2cd9c620e2322b11;
+var $c7b43fcb785e4aea$export$4f0196bc582f3c34;
+var $c7b43fcb785e4aea$export$a6cdc56e425d0d0a;
+var $c7b43fcb785e4aea$export$4cfafb42c91880c2;
+var $c7b43fcb785e4aea$export$a18515a8376ae56;
+var $c7b43fcb785e4aea$export$c3825b437cbdea5c;
+var $c7b43fcb785e4aea$export$f7ad0328861e2f03;
+var $c7b43fcb785e4aea$export$de29947b9a3b69c4;
+var $c7b43fcb785e4aea$export$aae9d402fb2f2acd;
+var $c7b43fcb785e4aea$export$fc77a6137e3f91c;
+var $c7b43fcb785e4aea$export$b0e76d9850c64156;
+var $c7b43fcb785e4aea$export$7e3df82ee760448c;
+var $c7b43fcb785e4aea$export$ac607276a8fe9f0a;
+var $c7b43fcb785e4aea$export$dca3d8ad656c34d2;
+var $c7b43fcb785e4aea$export$980e8f800f2aa0d8;
+var $c7b43fcb785e4aea$export$b78eb6578ba92547;
+var $c7b43fcb785e4aea$export$70ae2c07e401031b;
+var $c7b43fcb785e4aea$export$bd4f6f7e1823bc9e;
+var $c7b43fcb785e4aea$export$59d9f6a8e797ecde;
 /**
  * Set a value on the given object.
  * @param {Object} obj
  * @param {String} prop
  * @param {any} value
- */ var $ea635059d2dab512$export$adaa4cf7ef1b65be;
+ */ var $c7b43fcb785e4aea$export$adaa4cf7ef1b65be;
 /**
  * Get a value from the given object.
  * @param {Object} obj
  * @param {String} prop
- */ var $ea635059d2dab512$export$3988ae62b71be9a3;
-var $ea635059d2dab512$export$e36fc9d62a853069;
-var $ea635059d2dab512$export$4950aa0f605343fb;
-var $ea635059d2dab512$export$792940db1c9e591d;
-var $ea635059d2dab512$export$47a57ed64c292d4f;
-var $ea635059d2dab512$export$f36d6a7a5c09a23e;
-var $ea635059d2dab512$export$c04f1882ebfe07d5;
+ */ var $c7b43fcb785e4aea$export$3988ae62b71be9a3;
+var $c7b43fcb785e4aea$export$e36fc9d62a853069;
+var $c7b43fcb785e4aea$export$4950aa0f605343fb;
+var $c7b43fcb785e4aea$export$792940db1c9e591d;
+var $c7b43fcb785e4aea$export$47a57ed64c292d4f;
+var $c7b43fcb785e4aea$export$f36d6a7a5c09a23e;
+var $c7b43fcb785e4aea$export$c04f1882ebfe07d5;
 "use strict";
-const $ea635059d2dab512$var$toString = Object.prototype.toString;
+const $c7b43fcb785e4aea$var$toString = Object.prototype.toString;
 
-var $1nQNF = parcelRequire("1nQNF");
-let $ea635059d2dab512$var$onExitCalled = false;
-let $ea635059d2dab512$var$onExitCallbacks = new Set();
-const $ea635059d2dab512$var$complements = {
+var $6JGMc = parcelRequire("6JGMc");
+let $c7b43fcb785e4aea$var$onExitCalled = false;
+let $c7b43fcb785e4aea$var$onExitCallbacks = new Set();
+const $c7b43fcb785e4aea$var$complements = {
     "yellow": "blue",
     "cyan": "red",
     "green": "magenta",
@@ -1109,35 +1105,35 @@ const $ea635059d2dab512$var$complements = {
     "magenta": "green",
     "white": "black"
 };
-$ea635059d2dab512$export$2cd9c620e2322b11 = (arr, prop)=>{
+$c7b43fcb785e4aea$export$2cd9c620e2322b11 = (arr, prop)=>{
     return arr.reduce((a, v)=>Math.max(a, prop ? v[prop].length : v.length), 0);
 };
-$ea635059d2dab512$export$4f0196bc582f3c34 = (str)=>!!str && $1nQNF.hasColor(str);
-const $ea635059d2dab512$var$isObject = $ea635059d2dab512$export$a6cdc56e425d0d0a = (val)=>{
+$c7b43fcb785e4aea$export$4f0196bc582f3c34 = (str)=>!!str && $6JGMc.hasColor(str);
+const $c7b43fcb785e4aea$var$isObject = $c7b43fcb785e4aea$export$a6cdc56e425d0d0a = (val)=>{
     return val !== null && typeof val === "object" && !Array.isArray(val);
 };
-$ea635059d2dab512$export$4cfafb42c91880c2 = (val)=>{
-    return $ea635059d2dab512$var$toString.call(val).slice(8, -1).toLowerCase().replace(/\s/g, "");
+$c7b43fcb785e4aea$export$4cfafb42c91880c2 = (val)=>{
+    return $c7b43fcb785e4aea$var$toString.call(val).slice(8, -1).toLowerCase().replace(/\s/g, "");
 };
-$ea635059d2dab512$export$a18515a8376ae56 = (val)=>{
-    return $ea635059d2dab512$export$4cfafb42c91880c2(val) === "asyncfunction";
+$c7b43fcb785e4aea$export$a18515a8376ae56 = (val)=>{
+    return $c7b43fcb785e4aea$export$4cfafb42c91880c2(val) === "asyncfunction";
 };
-$ea635059d2dab512$export$c3825b437cbdea5c = (val)=>{
+$c7b43fcb785e4aea$export$c3825b437cbdea5c = (val)=>{
     return val != null && typeof val !== "object" && typeof val !== "function";
 };
-$ea635059d2dab512$export$f7ad0328861e2f03 = (context, value, ...rest)=>{
+$c7b43fcb785e4aea$export$f7ad0328861e2f03 = (context, value, ...rest)=>{
     if (typeof value === "function") return value.call(context, ...rest);
     return value;
 };
-$ea635059d2dab512$export$de29947b9a3b69c4 = (choices = [])=>[
+$c7b43fcb785e4aea$export$de29947b9a3b69c4 = (choices = [])=>[
         ...choices.slice(1),
         choices[0]
     ];
-$ea635059d2dab512$export$aae9d402fb2f2acd = (choices = [])=>[
+$c7b43fcb785e4aea$export$aae9d402fb2f2acd = (choices = [])=>[
         choices.pop(),
         ...choices
     ];
-$ea635059d2dab512$export$fc77a6137e3f91c = (arr = [])=>{
+$c7b43fcb785e4aea$export$fc77a6137e3f91c = (arr = [])=>{
     let res = arr.slice();
     res.sort((a, b)=>{
         if (a.index > b.index) return 1;
@@ -1146,25 +1142,25 @@ $ea635059d2dab512$export$fc77a6137e3f91c = (arr = [])=>{
     });
     return res;
 };
-$ea635059d2dab512$export$b0e76d9850c64156 = (arr, index, pos)=>{
+$c7b43fcb785e4aea$export$b0e76d9850c64156 = (arr, index, pos)=>{
     let len = arr.length;
     let idx = pos === len ? 0 : pos < 0 ? len - 1 : pos;
     let choice = arr[index];
     arr[index] = arr[idx];
     arr[idx] = choice;
 };
-$ea635059d2dab512$export$7e3df82ee760448c = (stream, fallback = 80)=>{
+$c7b43fcb785e4aea$export$7e3df82ee760448c = (stream, fallback = 80)=>{
     let columns = stream && stream.columns ? stream.columns : fallback;
     if (stream && typeof stream.getWindowSize === "function") columns = stream.getWindowSize()[0];
     if (process.platform === "win32") return columns - 1;
     return columns;
 };
-$ea635059d2dab512$export$ac607276a8fe9f0a = (stream, fallback = 20)=>{
+$c7b43fcb785e4aea$export$ac607276a8fe9f0a = (stream, fallback = 20)=>{
     let rows = stream && stream.rows ? stream.rows : fallback;
     if (stream && typeof stream.getWindowSize === "function") rows = stream.getWindowSize()[1];
     return rows;
 };
-$ea635059d2dab512$export$dca3d8ad656c34d2 = (str, options = {})=>{
+$c7b43fcb785e4aea$export$dca3d8ad656c34d2 = (str, options = {})=>{
     if (!str) return str;
     if (typeof options === "number") options = {
         width: options
@@ -1181,39 +1177,39 @@ $ea635059d2dab512$export$dca3d8ad656c34d2 = (str, options = {})=>{
     if (options.padStart) lines = lines.map((line)=>line.padStart(width, " "));
     return indent + lines.join(newline);
 };
-$ea635059d2dab512$export$980e8f800f2aa0d8 = (color)=>{
-    let name = color.stack.find((n)=>$1nQNF.keys.color.includes(n));
-    if (name) return $1nQNF[name];
+$c7b43fcb785e4aea$export$980e8f800f2aa0d8 = (color)=>{
+    let name = color.stack.find((n)=>$6JGMc.keys.color.includes(n));
+    if (name) return $6JGMc[name];
     let bg = color.stack.find((n)=>n.slice(2) === "bg");
-    if (bg) return $1nQNF[name.slice(2)];
+    if (bg) return $6JGMc[name.slice(2)];
     return (str)=>str;
 };
-$ea635059d2dab512$export$b78eb6578ba92547 = (str)=>str ? str[0].toUpperCase() + str.slice(1) : "";
-$ea635059d2dab512$export$70ae2c07e401031b = (color)=>{
+$c7b43fcb785e4aea$export$b78eb6578ba92547 = (str)=>str ? str[0].toUpperCase() + str.slice(1) : "";
+$c7b43fcb785e4aea$export$70ae2c07e401031b = (color)=>{
     if (!color || !color.stack) return color;
-    let name = color.stack.find((n)=>$1nQNF.keys.color.includes(n));
+    let name = color.stack.find((n)=>$6JGMc.keys.color.includes(n));
     if (name) {
-        let col = $1nQNF["bg" + $ea635059d2dab512$export$b78eb6578ba92547(name)];
+        let col = $6JGMc["bg" + $c7b43fcb785e4aea$export$b78eb6578ba92547(name)];
         return col ? col.black : color;
     }
     let bg = color.stack.find((n)=>n.slice(0, 2) === "bg");
-    if (bg) return $1nQNF[bg.slice(2).toLowerCase()] || color;
-    return $1nQNF.none;
+    if (bg) return $6JGMc[bg.slice(2).toLowerCase()] || color;
+    return $6JGMc.none;
 };
-$ea635059d2dab512$export$bd4f6f7e1823bc9e = (color)=>{
+$c7b43fcb785e4aea$export$bd4f6f7e1823bc9e = (color)=>{
     if (!color || !color.stack) return color;
-    let name = color.stack.find((n)=>$1nQNF.keys.color.includes(n));
+    let name = color.stack.find((n)=>$6JGMc.keys.color.includes(n));
     let bg = color.stack.find((n)=>n.slice(0, 2) === "bg");
-    if (name && !bg) return $1nQNF[$ea635059d2dab512$var$complements[name] || name];
+    if (name && !bg) return $6JGMc[$c7b43fcb785e4aea$var$complements[name] || name];
     if (bg) {
         let lower = bg.slice(2).toLowerCase();
-        let comp = $ea635059d2dab512$var$complements[lower];
+        let comp = $c7b43fcb785e4aea$var$complements[lower];
         if (!comp) return color;
-        return $1nQNF["bg" + $ea635059d2dab512$export$b78eb6578ba92547(comp)] || color;
+        return $6JGMc["bg" + $c7b43fcb785e4aea$export$b78eb6578ba92547(comp)] || color;
     }
-    return $1nQNF.none;
+    return $6JGMc.none;
 };
-$ea635059d2dab512$export$59d9f6a8e797ecde = (date)=>{
+$c7b43fcb785e4aea$export$59d9f6a8e797ecde = (date)=>{
     let hours = date.getHours();
     let minutes = date.getMinutes();
     let ampm = hours >= 12 ? "pm" : "am";
@@ -1222,75 +1218,75 @@ $ea635059d2dab512$export$59d9f6a8e797ecde = (date)=>{
     let min = minutes < 10 ? "0" + minutes : minutes;
     return hrs + ":" + min + " " + ampm;
 };
-$ea635059d2dab512$export$adaa4cf7ef1b65be = (obj = {}, prop = "", val)=>{
+$c7b43fcb785e4aea$export$adaa4cf7ef1b65be = (obj = {}, prop = "", val)=>{
     return prop.split(".").reduce((acc, k, i, arr)=>{
         let value = arr.length - 1 > i ? acc[k] || {} : val;
-        if (!$ea635059d2dab512$export$a6cdc56e425d0d0a(value) && i < arr.length - 1) value = {};
+        if (!$c7b43fcb785e4aea$export$a6cdc56e425d0d0a(value) && i < arr.length - 1) value = {};
         return acc[k] = value;
     }, obj);
 };
-$ea635059d2dab512$export$3988ae62b71be9a3 = (obj = {}, prop = "", fallback)=>{
+$c7b43fcb785e4aea$export$3988ae62b71be9a3 = (obj = {}, prop = "", fallback)=>{
     let value = obj[prop] == null ? prop.split(".").reduce((acc, k)=>acc && acc[k], obj) : obj[prop];
     return value == null ? fallback : value;
 };
-$ea635059d2dab512$export$e36fc9d62a853069 = (target, b)=>{
-    if (!$ea635059d2dab512$var$isObject(target)) return b;
-    if (!$ea635059d2dab512$var$isObject(b)) return target;
+$c7b43fcb785e4aea$export$e36fc9d62a853069 = (target, b)=>{
+    if (!$c7b43fcb785e4aea$var$isObject(target)) return b;
+    if (!$c7b43fcb785e4aea$var$isObject(b)) return target;
     for (let key of Object.keys(b)){
         let desc = Object.getOwnPropertyDescriptor(b, key);
         if (hasOwnProperty.call(desc, "value")) {
-            if (hasOwnProperty.call(target, key) && $ea635059d2dab512$var$isObject(desc.value)) {
+            if (hasOwnProperty.call(target, key) && $c7b43fcb785e4aea$var$isObject(desc.value)) {
                 let existing = Object.getOwnPropertyDescriptor(target, key);
-                if ($ea635059d2dab512$var$isObject(existing.value) && existing.value !== desc.value) target[key] = $ea635059d2dab512$export$4950aa0f605343fb({}, target[key], b[key]);
+                if ($c7b43fcb785e4aea$var$isObject(existing.value) && existing.value !== desc.value) target[key] = $c7b43fcb785e4aea$export$4950aa0f605343fb({}, target[key], b[key]);
                 else Reflect.defineProperty(target, key, desc);
             } else Reflect.defineProperty(target, key, desc);
         } else Reflect.defineProperty(target, key, desc);
     }
     return target;
 };
-$ea635059d2dab512$export$4950aa0f605343fb = (...args)=>{
+$c7b43fcb785e4aea$export$4950aa0f605343fb = (...args)=>{
     let target = {};
-    for (let ele of args)$ea635059d2dab512$export$e36fc9d62a853069(target, ele);
+    for (let ele of args)$c7b43fcb785e4aea$export$e36fc9d62a853069(target, ele);
     return target;
 };
-$ea635059d2dab512$export$792940db1c9e591d = (obj, emitter)=>{
+$c7b43fcb785e4aea$export$792940db1c9e591d = (obj, emitter)=>{
     let proto = emitter.constructor.prototype;
     for (let key of Object.keys(proto)){
         let val = proto[key];
-        if (typeof val === "function") $ea635059d2dab512$export$f36d6a7a5c09a23e(obj, key, val.bind(emitter));
-        else $ea635059d2dab512$export$f36d6a7a5c09a23e(obj, key, val);
+        if (typeof val === "function") $c7b43fcb785e4aea$export$f36d6a7a5c09a23e(obj, key, val.bind(emitter));
+        else $c7b43fcb785e4aea$export$f36d6a7a5c09a23e(obj, key, val);
     }
 };
-const $ea635059d2dab512$var$onExit = (quit, code)=>{
-    if ($ea635059d2dab512$var$onExitCalled) return;
-    $ea635059d2dab512$var$onExitCalled = true;
-    $ea635059d2dab512$var$onExitCallbacks.forEach((fn)=>fn());
+const $c7b43fcb785e4aea$var$onExit = (quit, code)=>{
+    if ($c7b43fcb785e4aea$var$onExitCalled) return;
+    $c7b43fcb785e4aea$var$onExitCalled = true;
+    $c7b43fcb785e4aea$var$onExitCallbacks.forEach((fn)=>fn());
     if (quit === true) process.exit(128 + code);
 };
-const $ea635059d2dab512$var$onSigTerm = $ea635059d2dab512$var$onExit.bind(null, true, 15);
-const $ea635059d2dab512$var$onSigInt = $ea635059d2dab512$var$onExit.bind(null, true, 2);
-$ea635059d2dab512$export$47a57ed64c292d4f = (callback)=>{
-    if ($ea635059d2dab512$var$onExitCallbacks.size === 0) {
-        process.once("SIGTERM", $ea635059d2dab512$var$onSigTerm);
-        process.once("SIGINT", $ea635059d2dab512$var$onSigInt);
-        process.once("exit", $ea635059d2dab512$var$onExit);
+const $c7b43fcb785e4aea$var$onSigTerm = $c7b43fcb785e4aea$var$onExit.bind(null, true, 15);
+const $c7b43fcb785e4aea$var$onSigInt = $c7b43fcb785e4aea$var$onExit.bind(null, true, 2);
+$c7b43fcb785e4aea$export$47a57ed64c292d4f = (callback)=>{
+    if ($c7b43fcb785e4aea$var$onExitCallbacks.size === 0) {
+        process.once("SIGTERM", $c7b43fcb785e4aea$var$onSigTerm);
+        process.once("SIGINT", $c7b43fcb785e4aea$var$onSigInt);
+        process.once("exit", $c7b43fcb785e4aea$var$onExit);
     }
-    $ea635059d2dab512$var$onExitCallbacks.add(callback);
+    $c7b43fcb785e4aea$var$onExitCallbacks.add(callback);
     return ()=>{
-        $ea635059d2dab512$var$onExitCallbacks.delete(callback);
-        if ($ea635059d2dab512$var$onExitCallbacks.size === 0) {
-            process.off("SIGTERM", $ea635059d2dab512$var$onSigTerm);
-            process.off("SIGINT", $ea635059d2dab512$var$onSigInt);
-            process.off("exit", $ea635059d2dab512$var$onExit);
+        $c7b43fcb785e4aea$var$onExitCallbacks.delete(callback);
+        if ($c7b43fcb785e4aea$var$onExitCallbacks.size === 0) {
+            process.off("SIGTERM", $c7b43fcb785e4aea$var$onSigTerm);
+            process.off("SIGINT", $c7b43fcb785e4aea$var$onSigInt);
+            process.off("exit", $c7b43fcb785e4aea$var$onExit);
         }
     };
 };
-$ea635059d2dab512$export$f36d6a7a5c09a23e = (obj, key, value)=>{
+$c7b43fcb785e4aea$export$f36d6a7a5c09a23e = (obj, key, value)=>{
     Reflect.defineProperty(obj, key, {
         value: value
     });
 };
-$ea635059d2dab512$export$c04f1882ebfe07d5 = (obj, key, fn)=>{
+$c7b43fcb785e4aea$export$c04f1882ebfe07d5 = (obj, key, fn)=>{
     let custom;
     Reflect.defineProperty(obj, key, {
         enumerable: true,
@@ -1305,19 +1301,19 @@ $ea635059d2dab512$export$c04f1882ebfe07d5 = (obj, key, fn)=>{
 };
 
 });
-parcelRegister("1nQNF", function(module, exports) {
+parcelRegister("6JGMc", function(module, exports) {
 "use strict";
-const $1020e5664dc0c4b0$var$isObject = (val)=>val !== null && typeof val === "object" && !Array.isArray(val);
+const $4e782091be214adb$var$isObject = (val)=>val !== null && typeof val === "object" && !Array.isArray(val);
 /* eslint-disable no-control-regex */ // this is a modified version of https://github.com/chalk/ansi-regex (MIT License)
-const $1020e5664dc0c4b0$var$ANSI_REGEX = /[\u001b\u009b][[\]#;?()]*(?:(?:(?:[^\W_]*;?[^\W_]*)\u0007)|(?:(?:[0-9]{1,4}(;[0-9]{0,4})*)?[~0-9=<>cf-nqrtyA-PRZ]))/g;
-const $1020e5664dc0c4b0$var$hasColor = ()=>{
+const $4e782091be214adb$var$ANSI_REGEX = /[\u001b\u009b][[\]#;?()]*(?:(?:(?:[^\W_]*;?[^\W_]*)\u0007)|(?:(?:[0-9]{1,4}(;[0-9]{0,4})*)?[~0-9=<>cf-nqrtyA-PRZ]))/g;
+const $4e782091be214adb$var$hasColor = ()=>{
     if (typeof process !== "undefined") return process.env.FORCE_COLOR !== "0";
     return false;
 };
 
-const $1020e5664dc0c4b0$var$create = ()=>{
+const $4e782091be214adb$var$create = ()=>{
     const colors = {
-        enabled: $1020e5664dc0c4b0$var$hasColor(),
+        enabled: $4e782091be214adb$var$hasColor(),
         visible: true,
         styles: {},
         keys: {}
@@ -1546,7 +1542,7 @@ const $1020e5664dc0c4b0$var$create = ()=>{
         107,
         49
     ], "bgBright");
-    colors.ansiRegex = $1020e5664dc0c4b0$var$ANSI_REGEX;
+    colors.ansiRegex = $4e782091be214adb$var$ANSI_REGEX;
     colors.hasColor = colors.hasAnsi = (str)=>{
         colors.ansiRegex.lastIndex = 0;
         return typeof str === "string" && str !== "" && colors.ansiRegex.test(str);
@@ -1578,7 +1574,7 @@ const $1020e5664dc0c4b0$var$create = ()=>{
         });
     };
     colors.theme = (custom)=>{
-        if (!$1020e5664dc0c4b0$var$isObject(custom)) throw new TypeError("Expected theme to be an object");
+        if (!$4e782091be214adb$var$isObject(custom)) throw new TypeError("Expected theme to be an object");
         for (let name of Object.keys(custom))colors.alias(name, custom[name]);
         return colors;
     };
@@ -1592,68 +1588,68 @@ const $1020e5664dc0c4b0$var$create = ()=>{
     colors.alias("noop", (str)=>str);
     colors.none = colors.clear = colors.noop;
     colors.stripColor = colors.unstyle;
-    colors.symbols = (parcelRequire("aPBqx"));
+    colors.symbols = (parcelRequire("lIsg9"));
     colors.define = define;
     return colors;
 };
-module.exports = $1020e5664dc0c4b0$var$create();
-module.exports.create = $1020e5664dc0c4b0$var$create;
+module.exports = $4e782091be214adb$var$create();
+module.exports.create = $4e782091be214adb$var$create;
 
 });
 
 
 
-parcelRegister("bpn0n", function(module, exports) {
+parcelRegister("bk3cM", function(module, exports) {
 "use strict";
 
-var $eQuZw = parcelRequire("eQuZw");
+var $a69eW = parcelRequire("a69eW");
 
-var $gelok = parcelRequire("gelok");
+var $8Jlwu = parcelRequire("8Jlwu");
 
-var $k7DM2 = parcelRequire("k7DM2");
+var $h91fL = parcelRequire("h91fL");
 module.exports = (prompt)=>{
-    prompt.options = $k7DM2.merge({}, prompt.options.theme, prompt.options);
-    prompt.symbols = $gelok.merge(prompt.options);
-    prompt.styles = $eQuZw.merge(prompt.options);
+    prompt.options = $h91fL.merge({}, prompt.options.theme, prompt.options);
+    prompt.symbols = $8Jlwu.merge(prompt.options);
+    prompt.styles = $a69eW.merge(prompt.options);
 };
 
 });
-parcelRegister("eQuZw", function(module, exports) {
+parcelRegister("a69eW", function(module, exports) {
 "use strict";
 
-var $k7DM2 = parcelRequire("k7DM2");
+var $h91fL = parcelRequire("h91fL");
 
-var $1nQNF = parcelRequire("1nQNF");
-const $acedf638e27f50e8$var$styles = {
-    default: $1nQNF.noop,
-    noop: $1nQNF.noop,
+var $6JGMc = parcelRequire("6JGMc");
+const $75a1a1d0cc47810f$var$styles = {
+    default: $6JGMc.noop,
+    noop: $6JGMc.noop,
     /**
    * Modifiers
    */ set inverse (custom){
         this._inverse = custom;
     },
     get inverse () {
-        return this._inverse || $k7DM2.inverse(this.primary);
+        return this._inverse || $h91fL.inverse(this.primary);
     },
     set complement (custom){
         this._complement = custom;
     },
     get complement () {
-        return this._complement || $k7DM2.complement(this.primary);
+        return this._complement || $h91fL.complement(this.primary);
     },
     /**
    * Main color
-   */ primary: $1nQNF.cyan,
+   */ primary: $6JGMc.cyan,
     /**
    * Main palette
-   */ success: $1nQNF.green,
-    danger: $1nQNF.magenta,
-    strong: $1nQNF.bold,
-    warning: $1nQNF.yellow,
-    muted: $1nQNF.dim,
-    disabled: $1nQNF.gray,
-    dark: $1nQNF.dim.gray,
-    underline: $1nQNF.underline,
+   */ success: $6JGMc.green,
+    danger: $6JGMc.magenta,
+    strong: $6JGMc.bold,
+    warning: $6JGMc.yellow,
+    muted: $6JGMc.dim,
+    disabled: $6JGMc.gray,
+    dark: $6JGMc.dim.gray,
+    underline: $6JGMc.underline,
     set info (custom){
         this._info = custom;
     },
@@ -1713,32 +1709,32 @@ const $acedf638e27f50e8$var$styles = {
         return this._highlight || this.inverse;
     }
 };
-$acedf638e27f50e8$var$styles.merge = (options = {})=>{
-    if (options.styles && typeof options.styles.enabled === "boolean") $1nQNF.enabled = options.styles.enabled;
-    if (options.styles && typeof options.styles.visible === "boolean") $1nQNF.visible = options.styles.visible;
-    let result = $k7DM2.merge({}, $acedf638e27f50e8$var$styles, options.styles);
+$75a1a1d0cc47810f$var$styles.merge = (options = {})=>{
+    if (options.styles && typeof options.styles.enabled === "boolean") $6JGMc.enabled = options.styles.enabled;
+    if (options.styles && typeof options.styles.visible === "boolean") $6JGMc.visible = options.styles.visible;
+    let result = $h91fL.merge({}, $75a1a1d0cc47810f$var$styles, options.styles);
     delete result.merge;
-    for (let key of Object.keys($1nQNF))if (!hasOwnProperty.call(result, key)) Reflect.defineProperty(result, key, {
-        get: ()=>$1nQNF[key]
+    for (let key of Object.keys($6JGMc))if (!hasOwnProperty.call(result, key)) Reflect.defineProperty(result, key, {
+        get: ()=>$6JGMc[key]
     });
-    for (let key of Object.keys($1nQNF.styles))if (!hasOwnProperty.call(result, key)) Reflect.defineProperty(result, key, {
-        get: ()=>$1nQNF[key]
+    for (let key of Object.keys($6JGMc.styles))if (!hasOwnProperty.call(result, key)) Reflect.defineProperty(result, key, {
+        get: ()=>$6JGMc[key]
     });
     return result;
 };
-module.exports = $acedf638e27f50e8$var$styles;
+module.exports = $75a1a1d0cc47810f$var$styles;
 
 });
 
-parcelRegister("gelok", function(module, exports) {
+parcelRegister("8Jlwu", function(module, exports) {
 "use strict";
-const $bd0e8c068afa3217$var$isWindows = process.platform === "win32";
+const $65b338bd52b1393f$var$isWindows = process.platform === "win32";
 
-var $1nQNF = parcelRequire("1nQNF");
+var $6JGMc = parcelRequire("6JGMc");
 
-var $k7DM2 = parcelRequire("k7DM2");
-const $bd0e8c068afa3217$var$symbols = {
-    ...$1nQNF.symbols,
+var $h91fL = parcelRequire("h91fL");
+const $65b338bd52b1393f$var$symbols = {
+    ...$6JGMc.symbols,
     upDownDoubleArrow: "\u21D5",
     upDownDoubleArrow2: "\u2B0D",
     upDownArrow: "\u2195",
@@ -1750,7 +1746,7 @@ const $bd0e8c068afa3217$var$symbols = {
     ellipsisSmall: "\u2026",
     fullBlock: "\u2588",
     identicalTo: "\u2261",
-    indicator: $1nQNF.symbols.check,
+    indicator: $6JGMc.symbols.check,
     leftAngle: "\u2039",
     mark: "\u203B",
     minus: "\u2212",
@@ -1788,19 +1784,19 @@ const $bd0e8c068afa3217$var$symbols = {
         disabled: "\u25B6"
     },
     prefix: {
-        pending: $1nQNF.symbols.question,
-        submitted: $1nQNF.symbols.check,
-        cancelled: $1nQNF.symbols.cross
+        pending: $6JGMc.symbols.question,
+        submitted: $6JGMc.symbols.check,
+        cancelled: $6JGMc.symbols.cross
     },
     separator: {
-        pending: $1nQNF.symbols.pointerSmall,
-        submitted: $1nQNF.symbols.middot,
-        cancelled: $1nQNF.symbols.middot
+        pending: $6JGMc.symbols.pointerSmall,
+        submitted: $6JGMc.symbols.middot,
+        cancelled: $6JGMc.symbols.middot
     },
     radio: {
-        off: $bd0e8c068afa3217$var$isWindows ? "( )" : "\u25EF",
-        on: $bd0e8c068afa3217$var$isWindows ? "(*)" : "\u25C9",
-        disabled: $bd0e8c068afa3217$var$isWindows ? "(|)" : "\u24BE"
+        off: $65b338bd52b1393f$var$isWindows ? "( )" : "\u25EF",
+        on: $65b338bd52b1393f$var$isWindows ? "(*)" : "\u25C9",
+        disabled: $65b338bd52b1393f$var$isWindows ? "(|)" : "\u24BE"
     },
     numbers: [
         "\u24EA",
@@ -1856,71 +1852,71 @@ const $bd0e8c068afa3217$var$symbols = {
         "\u32BF"
     ]
 };
-$bd0e8c068afa3217$var$symbols.merge = (options)=>{
-    let result = $k7DM2.merge({}, $1nQNF.symbols, $bd0e8c068afa3217$var$symbols, options.symbols);
+$65b338bd52b1393f$var$symbols.merge = (options)=>{
+    let result = $h91fL.merge({}, $6JGMc.symbols, $65b338bd52b1393f$var$symbols, options.symbols);
     delete result.merge;
     return result;
 };
-module.exports = $bd0e8c068afa3217$var$symbols;
+module.exports = $65b338bd52b1393f$var$symbols;
 
 });
 
 
-parcelRegister("b3z4b", function(module, exports) {
+parcelRegister("fo01Y", function(module, exports) {
 "use strict";
-const $80cb2cfd2c311bf9$var$isTerm = process.env.TERM_PROGRAM === "Apple_Terminal";
+const $b3391f051817b693$var$isTerm = process.env.TERM_PROGRAM === "Apple_Terminal";
 
-var $6jmOe = parcelRequire("6jmOe");
+var $kCxMd = parcelRequire("kCxMd");
 
-var $k7DM2 = parcelRequire("k7DM2");
-const $80cb2cfd2c311bf9$var$ansi = module.exports = module.exports;
-const $80cb2cfd2c311bf9$var$ESC = "\x1b[";
-const $80cb2cfd2c311bf9$var$BEL = "\x07";
-let $80cb2cfd2c311bf9$var$hidden = false;
-const $80cb2cfd2c311bf9$var$code = $80cb2cfd2c311bf9$var$ansi.code = {
-    bell: $80cb2cfd2c311bf9$var$BEL,
-    beep: $80cb2cfd2c311bf9$var$BEL,
-    beginning: `${$80cb2cfd2c311bf9$var$ESC}G`,
-    down: `${$80cb2cfd2c311bf9$var$ESC}J`,
-    esc: $80cb2cfd2c311bf9$var$ESC,
-    getPosition: `${$80cb2cfd2c311bf9$var$ESC}6n`,
-    hide: `${$80cb2cfd2c311bf9$var$ESC}?25l`,
-    line: `${$80cb2cfd2c311bf9$var$ESC}2K`,
-    lineEnd: `${$80cb2cfd2c311bf9$var$ESC}K`,
-    lineStart: `${$80cb2cfd2c311bf9$var$ESC}1K`,
-    restorePosition: $80cb2cfd2c311bf9$var$ESC + ($80cb2cfd2c311bf9$var$isTerm ? "8" : "u"),
-    savePosition: $80cb2cfd2c311bf9$var$ESC + ($80cb2cfd2c311bf9$var$isTerm ? "7" : "s"),
-    screen: `${$80cb2cfd2c311bf9$var$ESC}2J`,
-    show: `${$80cb2cfd2c311bf9$var$ESC}?25h`,
-    up: `${$80cb2cfd2c311bf9$var$ESC}1J`
+var $h91fL = parcelRequire("h91fL");
+const $b3391f051817b693$var$ansi = module.exports = module.exports;
+const $b3391f051817b693$var$ESC = "\x1b[";
+const $b3391f051817b693$var$BEL = "\x07";
+let $b3391f051817b693$var$hidden = false;
+const $b3391f051817b693$var$code = $b3391f051817b693$var$ansi.code = {
+    bell: $b3391f051817b693$var$BEL,
+    beep: $b3391f051817b693$var$BEL,
+    beginning: `${$b3391f051817b693$var$ESC}G`,
+    down: `${$b3391f051817b693$var$ESC}J`,
+    esc: $b3391f051817b693$var$ESC,
+    getPosition: `${$b3391f051817b693$var$ESC}6n`,
+    hide: `${$b3391f051817b693$var$ESC}?25l`,
+    line: `${$b3391f051817b693$var$ESC}2K`,
+    lineEnd: `${$b3391f051817b693$var$ESC}K`,
+    lineStart: `${$b3391f051817b693$var$ESC}1K`,
+    restorePosition: $b3391f051817b693$var$ESC + ($b3391f051817b693$var$isTerm ? "8" : "u"),
+    savePosition: $b3391f051817b693$var$ESC + ($b3391f051817b693$var$isTerm ? "7" : "s"),
+    screen: `${$b3391f051817b693$var$ESC}2J`,
+    show: `${$b3391f051817b693$var$ESC}?25h`,
+    up: `${$b3391f051817b693$var$ESC}1J`
 };
-const $80cb2cfd2c311bf9$var$cursor = $80cb2cfd2c311bf9$var$ansi.cursor = {
+const $b3391f051817b693$var$cursor = $b3391f051817b693$var$ansi.cursor = {
     get hidden () {
-        return $80cb2cfd2c311bf9$var$hidden;
+        return $b3391f051817b693$var$hidden;
     },
     hide () {
-        $80cb2cfd2c311bf9$var$hidden = true;
-        return $80cb2cfd2c311bf9$var$code.hide;
+        $b3391f051817b693$var$hidden = true;
+        return $b3391f051817b693$var$code.hide;
     },
     show () {
-        $80cb2cfd2c311bf9$var$hidden = false;
-        return $80cb2cfd2c311bf9$var$code.show;
+        $b3391f051817b693$var$hidden = false;
+        return $b3391f051817b693$var$code.show;
     },
-    forward: (count = 1)=>`${$80cb2cfd2c311bf9$var$ESC}${count}C`,
-    backward: (count = 1)=>`${$80cb2cfd2c311bf9$var$ESC}${count}D`,
-    nextLine: (count = 1)=>`${$80cb2cfd2c311bf9$var$ESC}E`.repeat(count),
-    prevLine: (count = 1)=>`${$80cb2cfd2c311bf9$var$ESC}F`.repeat(count),
-    up: (count = 1)=>count ? `${$80cb2cfd2c311bf9$var$ESC}${count}A` : "",
-    down: (count = 1)=>count ? `${$80cb2cfd2c311bf9$var$ESC}${count}B` : "",
-    right: (count = 1)=>count ? `${$80cb2cfd2c311bf9$var$ESC}${count}C` : "",
-    left: (count = 1)=>count ? `${$80cb2cfd2c311bf9$var$ESC}${count}D` : "",
+    forward: (count = 1)=>`${$b3391f051817b693$var$ESC}${count}C`,
+    backward: (count = 1)=>`${$b3391f051817b693$var$ESC}${count}D`,
+    nextLine: (count = 1)=>`${$b3391f051817b693$var$ESC}E`.repeat(count),
+    prevLine: (count = 1)=>`${$b3391f051817b693$var$ESC}F`.repeat(count),
+    up: (count = 1)=>count ? `${$b3391f051817b693$var$ESC}${count}A` : "",
+    down: (count = 1)=>count ? `${$b3391f051817b693$var$ESC}${count}B` : "",
+    right: (count = 1)=>count ? `${$b3391f051817b693$var$ESC}${count}C` : "",
+    left: (count = 1)=>count ? `${$b3391f051817b693$var$ESC}${count}D` : "",
     to (x, y) {
-        return y ? `${$80cb2cfd2c311bf9$var$ESC}${y + 1};${x + 1}H` : `${$80cb2cfd2c311bf9$var$ESC}${x + 1}G`;
+        return y ? `${$b3391f051817b693$var$ESC}${y + 1};${x + 1}H` : `${$b3391f051817b693$var$ESC}${x + 1}G`;
     },
     move (x = 0, y = 0) {
         let res = "";
-        res += x < 0 ? $80cb2cfd2c311bf9$var$cursor.left(-x) : x > 0 ? $80cb2cfd2c311bf9$var$cursor.right(x) : "";
-        res += y < 0 ? $80cb2cfd2c311bf9$var$cursor.up(-y) : y > 0 ? $80cb2cfd2c311bf9$var$cursor.down(y) : "";
+        res += x < 0 ? $b3391f051817b693$var$cursor.left(-x) : x > 0 ? $b3391f051817b693$var$cursor.right(x) : "";
+        res += y < 0 ? $b3391f051817b693$var$cursor.up(-y) : y > 0 ? $b3391f051817b693$var$cursor.down(y) : "";
         return res;
     },
     strLen (str) {
@@ -1935,110 +1931,110 @@ const $80cb2cfd2c311bf9$var$cursor = $80cb2cfd2c311bf9$var$ansi.cursor = {
     },
     restore (state = {}) {
         let { after: after, cursor: cursor, initial: initial, input: input, prompt: prompt, size: size, value: value } = state;
-        initial = $k7DM2.isPrimitive(initial) ? String(initial) : "";
-        input = $k7DM2.isPrimitive(input) ? String(input) : "";
-        value = $k7DM2.isPrimitive(value) ? String(value) : "";
+        initial = $h91fL.isPrimitive(initial) ? String(initial) : "";
+        input = $h91fL.isPrimitive(input) ? String(input) : "";
+        value = $h91fL.isPrimitive(value) ? String(value) : "";
         if (size) {
-            let codes = $80cb2cfd2c311bf9$var$ansi.cursor.up(size) + $80cb2cfd2c311bf9$var$ansi.cursor.to(this.strLen(prompt));
+            let codes = $b3391f051817b693$var$ansi.cursor.up(size) + $b3391f051817b693$var$ansi.cursor.to(this.strLen(prompt));
             let diff = input.length - cursor;
-            if (diff > 0) codes += $80cb2cfd2c311bf9$var$ansi.cursor.left(diff);
+            if (diff > 0) codes += $b3391f051817b693$var$ansi.cursor.left(diff);
             return codes;
         }
         if (value || after) {
             let pos = !input && !!initial ? -this.strLen(initial) : -this.strLen(input) + cursor;
             if (after) pos -= this.strLen(after);
             if (input === "" && initial && !prompt.includes(initial)) pos += this.strLen(initial);
-            return $80cb2cfd2c311bf9$var$ansi.cursor.move(pos);
+            return $b3391f051817b693$var$ansi.cursor.move(pos);
         }
     }
 };
-const $80cb2cfd2c311bf9$var$erase = $80cb2cfd2c311bf9$var$ansi.erase = {
-    screen: $80cb2cfd2c311bf9$var$code.screen,
-    up: $80cb2cfd2c311bf9$var$code.up,
-    down: $80cb2cfd2c311bf9$var$code.down,
-    line: $80cb2cfd2c311bf9$var$code.line,
-    lineEnd: $80cb2cfd2c311bf9$var$code.lineEnd,
-    lineStart: $80cb2cfd2c311bf9$var$code.lineStart,
+const $b3391f051817b693$var$erase = $b3391f051817b693$var$ansi.erase = {
+    screen: $b3391f051817b693$var$code.screen,
+    up: $b3391f051817b693$var$code.up,
+    down: $b3391f051817b693$var$code.down,
+    line: $b3391f051817b693$var$code.line,
+    lineEnd: $b3391f051817b693$var$code.lineEnd,
+    lineStart: $b3391f051817b693$var$code.lineStart,
     lines (n) {
         let str = "";
-        for(let i = 0; i < n; i++)str += $80cb2cfd2c311bf9$var$ansi.erase.line + (i < n - 1 ? $80cb2cfd2c311bf9$var$ansi.cursor.up(1) : "");
-        if (n) str += $80cb2cfd2c311bf9$var$ansi.code.beginning;
+        for(let i = 0; i < n; i++)str += $b3391f051817b693$var$ansi.erase.line + (i < n - 1 ? $b3391f051817b693$var$ansi.cursor.up(1) : "");
+        if (n) str += $b3391f051817b693$var$ansi.code.beginning;
         return str;
     }
 };
-$80cb2cfd2c311bf9$var$ansi.clear = (input = "", columns = process.stdout.columns)=>{
-    if (!columns) return $80cb2cfd2c311bf9$var$erase.line + $80cb2cfd2c311bf9$var$cursor.to(0);
+$b3391f051817b693$var$ansi.clear = (input = "", columns = process.stdout.columns)=>{
+    if (!columns) return $b3391f051817b693$var$erase.line + $b3391f051817b693$var$cursor.to(0);
     let width = (str)=>[
-            ...$6jmOe(str)
+            ...$kCxMd(str)
         ].length;
     let lines = input.split(/\r?\n/);
     let rows = 0;
     for (let line of lines)rows += 1 + Math.floor(Math.max(width(line) - 1, 0) / columns);
-    return ($80cb2cfd2c311bf9$var$erase.line + $80cb2cfd2c311bf9$var$cursor.prevLine()).repeat(rows - 1) + $80cb2cfd2c311bf9$var$erase.line + $80cb2cfd2c311bf9$var$cursor.to(0);
+    return ($b3391f051817b693$var$erase.line + $b3391f051817b693$var$cursor.prevLine()).repeat(rows - 1) + $b3391f051817b693$var$erase.line + $b3391f051817b693$var$cursor.to(0);
 };
 
 });
 
 
-parcelRegister("f40NT", function(module, exports) {
+parcelRegister("iFfp1", function(module, exports) {
 "use strict";
 
-var $k7DM2 = parcelRequire("k7DM2");
-const $af77da59e0244a51$var$define = (key, fn)=>{
-    $k7DM2.defineExport(module.exports, key, fn);
-    $k7DM2.defineExport(module.exports, key.toLowerCase(), fn);
+var $h91fL = parcelRequire("h91fL");
+const $d96800f5d3e6a7b7$var$define = (key, fn)=>{
+    $h91fL.defineExport(module.exports, key, fn);
+    $h91fL.defineExport(module.exports, key.toLowerCase(), fn);
 };
 
-$af77da59e0244a51$var$define("AutoComplete", ()=>(parcelRequire("8C3T9")));
+$d96800f5d3e6a7b7$var$define("AutoComplete", ()=>(parcelRequire("esnV9")));
 
-$af77da59e0244a51$var$define("BasicAuth", ()=>(parcelRequire("h7H7V")));
+$d96800f5d3e6a7b7$var$define("BasicAuth", ()=>(parcelRequire("3jJRO")));
 
-$af77da59e0244a51$var$define("Confirm", ()=>(parcelRequire("j11Ly")));
+$d96800f5d3e6a7b7$var$define("Confirm", ()=>(parcelRequire("cmBmB")));
 
-$af77da59e0244a51$var$define("Editable", ()=>(parcelRequire("eSVnW")));
+$d96800f5d3e6a7b7$var$define("Editable", ()=>(parcelRequire("kfDEO")));
 
-$af77da59e0244a51$var$define("Form", ()=>(parcelRequire("eFIsv")));
+$d96800f5d3e6a7b7$var$define("Form", ()=>(parcelRequire("aZCKE")));
 
-$af77da59e0244a51$var$define("Input", ()=>(parcelRequire("j2IWD")));
+$d96800f5d3e6a7b7$var$define("Input", ()=>(parcelRequire("1AbW6")));
 
-$af77da59e0244a51$var$define("Invisible", ()=>(parcelRequire("eUdyi")));
+$d96800f5d3e6a7b7$var$define("Invisible", ()=>(parcelRequire("hOkSq")));
 
-$af77da59e0244a51$var$define("List", ()=>(parcelRequire("5aLSO")));
+$d96800f5d3e6a7b7$var$define("List", ()=>(parcelRequire("kQSAh")));
 
-$af77da59e0244a51$var$define("MultiSelect", ()=>(parcelRequire("6Acnj")));
+$d96800f5d3e6a7b7$var$define("MultiSelect", ()=>(parcelRequire("lkCXa")));
 
-$af77da59e0244a51$var$define("Numeral", ()=>(parcelRequire("kIJlw")));
+$d96800f5d3e6a7b7$var$define("Numeral", ()=>(parcelRequire("f3ce0")));
 
-$af77da59e0244a51$var$define("Password", ()=>(parcelRequire("6Edg3")));
+$d96800f5d3e6a7b7$var$define("Password", ()=>(parcelRequire("4NZRQ")));
 
-$af77da59e0244a51$var$define("Scale", ()=>(parcelRequire("7AnGl")));
+$d96800f5d3e6a7b7$var$define("Scale", ()=>(parcelRequire("9JggT")));
 
-$af77da59e0244a51$var$define("Select", ()=>(parcelRequire("7ntix")));
+$d96800f5d3e6a7b7$var$define("Select", ()=>(parcelRequire("81q1B")));
 
-$af77da59e0244a51$var$define("Snippet", ()=>(parcelRequire("l4gAS")));
+$d96800f5d3e6a7b7$var$define("Snippet", ()=>(parcelRequire("6wCWQ")));
 
-$af77da59e0244a51$var$define("Sort", ()=>(parcelRequire("3Sw4S")));
+$d96800f5d3e6a7b7$var$define("Sort", ()=>(parcelRequire("3kq2T")));
 
-$af77da59e0244a51$var$define("Survey", ()=>(parcelRequire("aBcZL")));
+$d96800f5d3e6a7b7$var$define("Survey", ()=>(parcelRequire("10WNd")));
 
-$af77da59e0244a51$var$define("Text", ()=>(parcelRequire("kEsiz")));
+$d96800f5d3e6a7b7$var$define("Text", ()=>(parcelRequire("4MK8D")));
 
-$af77da59e0244a51$var$define("Toggle", ()=>(parcelRequire("6fI3r")));
+$d96800f5d3e6a7b7$var$define("Toggle", ()=>(parcelRequire("aeyjP")));
 
-$af77da59e0244a51$var$define("Quiz", ()=>(parcelRequire("52YC1")));
+$d96800f5d3e6a7b7$var$define("Quiz", ()=>(parcelRequire("lCQag")));
 
 });
-parcelRegister("8C3T9", function(module, exports) {
+parcelRegister("esnV9", function(module, exports) {
 "use strict";
 
-var $7ntix = parcelRequire("7ntix");
-const $6454e38874917bd1$var$highlight = (input, color)=>{
+var $81q1B = parcelRequire("81q1B");
+const $a8663c63261ec71e$var$highlight = (input, color)=>{
     const regex = input ? new RegExp(input, "ig") : /$^/;
     return (str)=>{
         return input ? str.replace(regex, (match)=>color(match)) : str;
     };
 };
-class $6454e38874917bd1$var$AutoComplete extends $7ntix {
+class $a8663c63261ec71e$var$AutoComplete extends $81q1B {
     constructor(options){
         super(options);
         this.cursorShow();
@@ -2107,7 +2103,7 @@ class $6454e38874917bd1$var$AutoComplete extends $7ntix {
             if (hl.stack) return hl(input);
             return hl.call(this, input);
         };
-        const color = $6454e38874917bd1$var$highlight(this.input, style);
+        const color = $a8663c63261ec71e$var$highlight(this.input, style);
         const choices = this.choices;
         this.choices = choices.map((ch)=>({
                 ...ch,
@@ -2121,16 +2117,16 @@ class $6454e38874917bd1$var$AutoComplete extends $7ntix {
         return super.submit();
     }
 }
-module.exports = $6454e38874917bd1$var$AutoComplete;
+module.exports = $a8663c63261ec71e$var$AutoComplete;
 
 });
-parcelRegister("7ntix", function(module, exports) {
+parcelRegister("81q1B", function(module, exports) {
 "use strict";
 
-var $7etP8 = parcelRequire("7etP8");
+var $i40GR = parcelRequire("i40GR");
 
-var $k7DM2 = parcelRequire("k7DM2");
-class $55f1685fc7964ba3$var$SelectPrompt extends $7etP8 {
+var $h91fL = parcelRequire("h91fL");
+class $5d729ab48aada7bc$var$SelectPrompt extends $i40GR {
     constructor(options){
         super(options);
         this.emptyError = this.options.emptyError || "No items were selected";
@@ -2152,7 +2148,7 @@ class $55f1685fc7964ba3$var$SelectPrompt extends $7etP8 {
     }
     choiceMessage(choice, i) {
         let message = this.resolve(choice.message, this.state, choice, i);
-        if (choice.role === "heading" && !$k7DM2.hasColor(message)) message = this.styles.strong(message);
+        if (choice.role === "heading" && !$h91fL.hasColor(message)) message = this.styles.strong(message);
         return this.resolve(message, this.state, choice, i);
     }
     choiceSeparator() {
@@ -2164,7 +2160,7 @@ class $55f1685fc7964ba3$var$SelectPrompt extends $7etP8 {
         let pointer = await this.pointer(choice, i);
         let check = await this.indicator(choice, i) + (choice.pad || "");
         let hint = await this.resolve(choice.hint, this.state, choice, i);
-        if (hint && !$k7DM2.hasColor(hint)) hint = this.styles.muted(hint);
+        if (hint && !$h91fL.hasColor(hint)) hint = this.styles.muted(hint);
         let ind = this.indent(choice);
         let msg = await this.choiceMessage(choice, i);
         let line = ()=>[
@@ -2176,7 +2172,7 @@ class $55f1685fc7964ba3$var$SelectPrompt extends $7etP8 {
             ].filter(Boolean).join(" ");
         if (choice.role === "heading") return line();
         if (choice.disabled) {
-            if (!$k7DM2.hasColor(msg)) msg = this.styles.disabled(msg);
+            if (!$h91fL.hasColor(msg)) msg = this.styles.disabled(msg);
             return line();
         }
         if (focused) msg = this.styles.em(msg);
@@ -2235,21 +2231,21 @@ class $55f1685fc7964ba3$var$SelectPrompt extends $7etP8 {
         this.restore();
     }
 }
-module.exports = $55f1685fc7964ba3$var$SelectPrompt;
+module.exports = $5d729ab48aada7bc$var$SelectPrompt;
 
 });
-parcelRegister("7etP8", function(module, exports) {
+parcelRegister("i40GR", function(module, exports) {
 "use strict";
 
-var $6jmOe = parcelRequire("6jmOe");
+var $kCxMd = parcelRequire("kCxMd");
 
-var $aQOyv = parcelRequire("aQOyv");
+var $3fCUp = parcelRequire("3fCUp");
 
-var $GfAga = parcelRequire("GfAga");
+var $4AFHQ = parcelRequire("4AFHQ");
 
-var $k7DM2 = parcelRequire("k7DM2");
-const { reorder: $5440f993ddf063f9$var$reorder, scrollUp: $5440f993ddf063f9$var$scrollUp, scrollDown: $5440f993ddf063f9$var$scrollDown, isObject: $5440f993ddf063f9$var$isObject, swap: $5440f993ddf063f9$var$swap } = $k7DM2;
-class $5440f993ddf063f9$var$ArrayPrompt extends $aQOyv {
+var $h91fL = parcelRequire("h91fL");
+const { reorder: $d26922cefce51140$var$reorder, scrollUp: $d26922cefce51140$var$scrollUp, scrollDown: $d26922cefce51140$var$scrollDown, isObject: $d26922cefce51140$var$isObject, swap: $d26922cefce51140$var$swap } = $h91fL;
+class $d26922cefce51140$var$ArrayPrompt extends $3fCUp {
     constructor(options){
         super(options);
         this.cursorHide();
@@ -2272,7 +2268,7 @@ class $5440f993ddf063f9$var$ArrayPrompt extends $aQOyv {
         this.choices = await Promise.all(await this.toChoices(choices));
         this.choices.forEach((ch)=>ch.enabled = false);
         if (typeof suggest !== "function" && this.selectable.length === 0) throw new Error("At least one choice must be selectable");
-        if ($5440f993ddf063f9$var$isObject(initial)) initial = Object.keys(initial);
+        if ($d26922cefce51140$var$isObject(initial)) initial = Object.keys(initial);
         if (Array.isArray(initial)) {
             if (autofocus != null) this.index = this.findIndex(autofocus);
             initial.forEach((v)=>this.enable(this.find(v)));
@@ -2315,7 +2311,7 @@ class $5440f993ddf063f9$var$ArrayPrompt extends $aQOyv {
         if (ele.normalized) return ele;
         ele.normalized = true;
         let origVal = ele.value;
-        let role = $GfAga(ele.role, this.options);
+        let role = $4AFHQ(ele.role, this.options);
         ele = role(this, ele);
         if (typeof ele.disabled === "string" && !ele.hint) {
             ele.hint = ele.disabled;
@@ -2333,12 +2329,12 @@ class $5440f993ddf063f9$var$ArrayPrompt extends $aQOyv {
         ele.input = "";
         ele.index = i;
         ele.cursor = 0;
-        $k7DM2.define(ele, "parent", parent);
+        $h91fL.define(ele, "parent", parent);
         ele.level = parent ? parent.level + 1 : 1;
         if (ele.indent == null) ele.indent = parent ? parent.indent + "  " : ele.indent || "";
         ele.path = parent ? parent.path + "." + ele.name : ele.name;
         ele.enabled = !!(this.multiple && !this.isDisabled(ele) && (ele.enabled || this.isSelected(ele)));
-        if (!this.isDisabled(ele)) this.longest = Math.max(this.longest, $6jmOe(ele.message).length);
+        if (!this.isDisabled(ele)) this.longest = Math.max(this.longest, $kCxMd(ele.message).length);
         // shallow clone the choice first
         let choice = {
             ...ele
@@ -2430,7 +2426,7 @@ class $5440f993ddf063f9$var$ArrayPrompt extends $aQOyv {
             parent.enabled = choices.every((ch)=>ch.enabled === true);
             parent = parent.parent;
         }
-        $5440f993ddf063f9$var$reset(this, this.choices);
+        $d26922cefce51140$var$reset(this, this.choices);
         this.emit("toggle", choice, this);
         return choice;
     }
@@ -2454,7 +2450,7 @@ class $5440f993ddf063f9$var$ArrayPrompt extends $aQOyv {
             let choice = this.choices.find((ch)=>i === ch.index);
             if (!choice.enabled && this.selected.length >= this.maxSelected) return this.alert();
             if (this.visible.indexOf(choice) === -1) {
-                let choices = $5440f993ddf063f9$var$reorder(this.choices);
+                let choices = $d26922cefce51140$var$reorder(this.choices);
                 let actualIdx = choices.indexOf(choice);
                 if (focused.index > actualIdx) {
                     let start = choices.slice(actualIdx, actualIdx + this.limit);
@@ -2485,13 +2481,13 @@ class $5440f993ddf063f9$var$ArrayPrompt extends $aQOyv {
         });
     }
     home() {
-        this.choices = $5440f993ddf063f9$var$reorder(this.choices);
+        this.choices = $d26922cefce51140$var$reorder(this.choices);
         this.index = 0;
         return this.render();
     }
     end() {
         let pos = this.choices.length - this.limit;
-        let choices = $5440f993ddf063f9$var$reorder(this.choices);
+        let choices = $d26922cefce51140$var$reorder(this.choices);
         this.choices = choices.slice(pos).concat(choices.slice(0, pos));
         this.index = this.limit - 1;
         return this.render();
@@ -2543,13 +2539,13 @@ class $5440f993ddf063f9$var$ArrayPrompt extends $aQOyv {
         return this.render();
     }
     scrollUp(i = 0) {
-        this.choices = $5440f993ddf063f9$var$scrollUp(this.choices);
+        this.choices = $d26922cefce51140$var$scrollUp(this.choices);
         this.index = i;
         if (this.isDisabled()) return this.up();
         return this.render();
     }
     scrollDown(i = this.visible.length - 1) {
-        this.choices = $5440f993ddf063f9$var$scrollDown(this.choices);
+        this.choices = $d26922cefce51140$var$scrollDown(this.choices);
         this.index = i;
         if (this.isDisabled()) return this.down();
         return this.render();
@@ -2591,7 +2587,7 @@ class $5440f993ddf063f9$var$ArrayPrompt extends $aQOyv {
         return this.render();
     }
     swap(pos) {
-        $5440f993ddf063f9$var$swap(this.choices, this.index, pos);
+        $d26922cefce51140$var$swap(this.choices, this.index, pos);
     }
     allChoicesAreDisabled(choices = this.choices) {
         return choices.every((choice)=>this.isDisabled(choice));
@@ -2640,7 +2636,7 @@ class $5440f993ddf063f9$var$ArrayPrompt extends $aQOyv {
         return result;
     }
     find(value, prop) {
-        if ($5440f993ddf063f9$var$isObject(value)) return prop ? value[prop] : value;
+        if ($d26922cefce51140$var$isObject(value)) return prop ? value[prop] : value;
         let isChoice = (ele, i)=>[
                 ele.name,
                 i
@@ -2666,7 +2662,7 @@ class $5440f993ddf063f9$var$ArrayPrompt extends $aQOyv {
         let value = this.selected;
         if (value === void 0) return this.alert();
         // re-sort choices to original order
-        if (Array.isArray(value) && reorder !== false && sort !== true) value = $k7DM2.reorder(value);
+        if (Array.isArray(value) && reorder !== false && sort !== true) value = $h91fL.reorder(value);
         this.value = multi ? value.map((ch)=>ch.name) : value.name;
         return super.submit();
     }
@@ -2687,7 +2683,7 @@ class $5440f993ddf063f9$var$ArrayPrompt extends $aQOyv {
         }
     }
     get choices() {
-        return $5440f993ddf063f9$var$reset(this, this.state.choices || []);
+        return $d26922cefce51140$var$reset(this, this.state.choices || []);
     }
     set visible(visible) {
         this.state.visible = visible;
@@ -2731,10 +2727,10 @@ class $5440f993ddf063f9$var$ArrayPrompt extends $aQOyv {
         return this.multiple ? this.enabled : this.focused;
     }
 }
-function $5440f993ddf063f9$var$reset(prompt, choices) {
+function $d26922cefce51140$var$reset(prompt, choices) {
     if (choices instanceof Promise) return choices;
     if (typeof choices === "function") {
-        if ($k7DM2.isAsyncFn(choices)) return choices;
+        if ($h91fL.isAsyncFn(choices)) return choices;
         choices = choices.call(prompt, prompt);
     }
     for (let choice of choices){
@@ -2746,14 +2742,14 @@ function $5440f993ddf063f9$var$reset(prompt, choices) {
     }
     return choices;
 }
-module.exports = $5440f993ddf063f9$var$ArrayPrompt;
+module.exports = $d26922cefce51140$var$ArrayPrompt;
 
 });
-parcelRegister("GfAga", function(module, exports) {
+parcelRegister("4AFHQ", function(module, exports) {
 "use strict";
 
-var $k7DM2 = parcelRequire("k7DM2");
-const $07f002fbd0f2b3ed$var$roles = {
+var $h91fL = parcelRequire("h91fL");
+const $357ae03643361800$var$roles = {
     default (prompt, choice) {
         return choice;
     },
@@ -2779,7 +2775,7 @@ const $07f002fbd0f2b3ed$var$roles = {
         throw new Error("input role is not implemented yet");
     },
     option (prompt, choice) {
-        return $07f002fbd0f2b3ed$var$roles.default(prompt, choice);
+        return $357ae03643361800$var$roles.default(prompt, choice);
     },
     radio (prompt, choice) {
         throw new Error("radio role is not implemented yet");
@@ -2798,7 +2794,7 @@ const $07f002fbd0f2b3ed$var$roles = {
     }
 };
 module.exports = (name, options = {})=>{
-    let role = $k7DM2.merge({}, $07f002fbd0f2b3ed$var$roles, options.roles);
+    let role = $h91fL.merge({}, $357ae03643361800$var$roles, options.roles);
     return role[name] || role.default;
 };
 
@@ -2807,15 +2803,15 @@ module.exports = (name, options = {})=>{
 
 
 
-parcelRegister("h7H7V", function(module, exports) {
+parcelRegister("3jJRO", function(module, exports) {
 "use strict";
 
-var $eqclx = parcelRequire("eqclx");
-function $c7748b345c1a962a$var$defaultAuthenticate(value, state) {
+var $1xU82 = parcelRequire("1xU82");
+function $26a6b9af5f96865f$var$defaultAuthenticate(value, state) {
     if (value.username === this.options.username && value.password === this.options.password) return true;
     return false;
 }
-const $c7748b345c1a962a$var$factory = (authenticate = $c7748b345c1a962a$var$defaultAuthenticate)=>{
+const $26a6b9af5f96865f$var$factory = (authenticate = $26a6b9af5f96865f$var$defaultAuthenticate)=>{
     const choices = [
         {
             name: "username",
@@ -2831,7 +2827,7 @@ const $c7748b345c1a962a$var$factory = (authenticate = $c7748b345c1a962a$var$defa
             }
         }
     ];
-    class BasicAuthPrompt extends $eqclx.create(authenticate) {
+    class BasicAuthPrompt extends $1xU82.create(authenticate) {
         constructor(options){
             super({
                 ...options,
@@ -2839,23 +2835,23 @@ const $c7748b345c1a962a$var$factory = (authenticate = $c7748b345c1a962a$var$defa
             });
         }
         static create(authenticate) {
-            return $c7748b345c1a962a$var$factory(authenticate);
+            return $26a6b9af5f96865f$var$factory(authenticate);
         }
     }
     return BasicAuthPrompt;
 };
-module.exports = $c7748b345c1a962a$var$factory();
+module.exports = $26a6b9af5f96865f$var$factory();
 
 });
-parcelRegister("eqclx", function(module, exports) {
+parcelRegister("1xU82", function(module, exports) {
 "use strict";
 
-var $eFIsv = parcelRequire("eFIsv");
-const $a7fd122614d020e9$var$defaultAuthenticate = ()=>{
+var $aZCKE = parcelRequire("aZCKE");
+const $1204697d98bdc354$var$defaultAuthenticate = ()=>{
     throw new Error("expected prompt to have a custom authenticate method");
 };
-const $a7fd122614d020e9$var$factory = (authenticate = $a7fd122614d020e9$var$defaultAuthenticate)=>{
-    class AuthPrompt extends $eFIsv {
+const $1204697d98bdc354$var$factory = (authenticate = $1204697d98bdc354$var$defaultAuthenticate)=>{
+    class AuthPrompt extends $aZCKE {
         constructor(options){
             super(options);
         }
@@ -2864,23 +2860,23 @@ const $a7fd122614d020e9$var$factory = (authenticate = $a7fd122614d020e9$var$defa
             super.base.submit.call(this);
         }
         static create(authenticate) {
-            return $a7fd122614d020e9$var$factory(authenticate);
+            return $1204697d98bdc354$var$factory(authenticate);
         }
     }
     return AuthPrompt;
 };
-module.exports = $a7fd122614d020e9$var$factory();
+module.exports = $1204697d98bdc354$var$factory();
 
 });
-parcelRegister("eFIsv", function(module, exports) {
+parcelRegister("aZCKE", function(module, exports) {
 "use strict";
 
-var $6jmOe = parcelRequire("6jmOe");
+var $kCxMd = parcelRequire("kCxMd");
 
-var $7ntix = parcelRequire("7ntix");
+var $81q1B = parcelRequire("81q1B");
 
-var $d2Xe8 = parcelRequire("d2Xe8");
-class $aae761a00af7dd81$var$FormPrompt extends $7ntix {
+var $fFJEH = parcelRequire("fFJEH");
+class $800da922f841166b$var$FormPrompt extends $81q1B {
     constructor(options){
         super({
             ...options,
@@ -3011,7 +3007,7 @@ class $aae761a00af7dd81$var$FormPrompt extends $7ntix {
                 input
             ].filter(Boolean).join(" ");
         if (state.submitted) {
-            msg = $6jmOe(msg);
+            msg = $kCxMd(msg);
             input = submitted(input);
             return line();
         }
@@ -3025,7 +3021,7 @@ class $aae761a00af7dd81$var$FormPrompt extends $7ntix {
                 showCursor: focused,
                 color: color
             };
-            input = $d2Xe8(this, options);
+            input = $fFJEH(this, options);
         }
         if (!this.isValue(input)) input = this.styles.muted(this.symbols.ellipsis);
         if (choice.result) this.values[name] = await choice.result.call(this, value, choice, i);
@@ -3039,13 +3035,13 @@ class $aae761a00af7dd81$var$FormPrompt extends $7ntix {
         return super.base.submit.call(this);
     }
 }
-module.exports = $aae761a00af7dd81$var$FormPrompt;
+module.exports = $800da922f841166b$var$FormPrompt;
 
 });
-parcelRegister("d2Xe8", function(module, exports) {
+parcelRegister("fFJEH", function(module, exports) {
 "use strict";
 
-var $k7DM2 = parcelRequire("k7DM2");
+var $h91fL = parcelRequire("h91fL");
 /**
  * Render a placeholder value with cursor and styling based on the
  * position of the cursor.
@@ -3061,7 +3057,7 @@ var $k7DM2 = parcelRequire("k7DM2");
     prompt.cursorHide();
     let { input: input = "", initial: initial = "", pos: pos, showCursor: showCursor = true, color: color } = options;
     let style = color || prompt.styles.placeholder;
-    let inverse = $k7DM2.inverse(prompt.styles.primary);
+    let inverse = $h91fL.inverse(prompt.styles.primary);
     let blinker = (str)=>inverse(prompt.styles.black(str));
     let output = input;
     let char = " ";
@@ -3072,8 +3068,8 @@ var $k7DM2 = parcelRequire("k7DM2");
     }
     if (showCursor && pos === 0 && initial === "" && input === "") return blinker(char);
     if (showCursor && pos === 0 && (input === initial || input === "")) return blinker(initial[0]) + style(initial.slice(1));
-    initial = $k7DM2.isPrimitive(initial) ? `${initial}` : "";
-    input = $k7DM2.isPrimitive(input) ? `${input}` : "";
+    initial = $h91fL.isPrimitive(initial) ? `${initial}` : "";
+    input = $h91fL.isPrimitive(input) ? `${input}` : "";
     let placeholder = initial && initial.startsWith(input) && initial !== input;
     let cursor = placeholder ? blinker(initial[input.length]) : reverse;
     if (pos !== input.length && showCursor === true) {
@@ -3093,28 +3089,28 @@ var $k7DM2 = parcelRequire("k7DM2");
 
 
 
-parcelRegister("j11Ly", function(module, exports) {
+parcelRegister("cmBmB", function(module, exports) {
 "use strict";
 
-var $8IC69 = parcelRequire("8IC69");
-class $dd7f7b04bd7fe6e5$var$ConfirmPrompt extends $8IC69 {
+var $6gAgM = parcelRequire("6gAgM");
+class $900485b76de23eab$var$ConfirmPrompt extends $6gAgM {
     constructor(options){
         super(options);
         this.default = this.options.default || (this.initial ? "(Y/n)" : "(y/N)");
     }
 }
-module.exports = $dd7f7b04bd7fe6e5$var$ConfirmPrompt;
+module.exports = $900485b76de23eab$var$ConfirmPrompt;
 
 });
-parcelRegister("8IC69", function(module, exports) {
+parcelRegister("6gAgM", function(module, exports) {
 "use strict";
 
-var $aQOyv = parcelRequire("aQOyv");
+var $3fCUp = parcelRequire("3fCUp");
 
-var $k7DM2 = parcelRequire("k7DM2");
-var $658ffc493940f558$require$isPrimitive = $k7DM2.isPrimitive;
-var $658ffc493940f558$require$hasColor = $k7DM2.hasColor;
-class $658ffc493940f558$var$BooleanPrompt extends $aQOyv {
+var $h91fL = parcelRequire("h91fL");
+var $49005f1891a57d3a$require$isPrimitive = $h91fL.isPrimitive;
+var $49005f1891a57d3a$require$hasColor = $h91fL.hasColor;
+class $49005f1891a57d3a$var$BooleanPrompt extends $3fCUp {
     constructor(options){
         super(options);
         this.cursorHide();
@@ -3143,12 +3139,12 @@ class $658ffc493940f558$var$BooleanPrompt extends $aQOyv {
         return /^[fn0]/i.test(input);
     }
     isValue(value) {
-        return $658ffc493940f558$require$isPrimitive(value) && (this.isTrue(value) || this.isFalse(value));
+        return $49005f1891a57d3a$require$isPrimitive(value) && (this.isTrue(value) || this.isFalse(value));
     }
     async hint() {
         if (this.state.status === "pending") {
             let hint = await this.element("hint");
-            if (!$658ffc493940f558$require$hasColor(hint)) return this.styles.muted(hint);
+            if (!$49005f1891a57d3a$require$hasColor(hint)) return this.styles.muted(hint);
             return hint;
         }
     }
@@ -3187,19 +3183,19 @@ class $658ffc493940f558$var$BooleanPrompt extends $aQOyv {
         return this.cast(super.value);
     }
 }
-module.exports = $658ffc493940f558$var$BooleanPrompt;
+module.exports = $49005f1891a57d3a$var$BooleanPrompt;
 
 });
 
 
-parcelRegister("eSVnW", function(module, exports) {
+parcelRegister("kfDEO", function(module, exports) {
 "use strict";
 
-var $7ntix = parcelRequire("7ntix");
+var $81q1B = parcelRequire("81q1B");
 
-var $eFIsv = parcelRequire("eFIsv");
-const $ad629f541014e2e9$var$form = $eFIsv.prototype;
-class $ad629f541014e2e9$var$Editable extends $7ntix {
+var $aZCKE = parcelRequire("aZCKE");
+const $ebe3f87624834f99$var$form = $aZCKE.prototype;
+class $ebe3f87624834f99$var$Editable extends $81q1B {
     constructor(options){
         super({
             ...options,
@@ -3218,13 +3214,13 @@ class $ad629f541014e2e9$var$Editable extends $7ntix {
         if (!choice.editable && !parent.editable) {
             if (char === "a" || char === "i") return super[char]();
         }
-        return $ad629f541014e2e9$var$form.dispatch.call(this, char, key);
+        return $ebe3f87624834f99$var$form.dispatch.call(this, char, key);
     }
     append(char, key) {
-        return $ad629f541014e2e9$var$form.append.call(this, char, key);
+        return $ebe3f87624834f99$var$form.append.call(this, char, key);
     }
     delete(char, key) {
-        return $ad629f541014e2e9$var$form.delete.call(this, char, key);
+        return $ebe3f87624834f99$var$form.delete.call(this, char, key);
     }
     space(char) {
         return this.focused.editable ? this.append(char) : super.space();
@@ -3233,10 +3229,10 @@ class $ad629f541014e2e9$var$Editable extends $7ntix {
         return this.focused.editable ? this.append(char) : super.number(char);
     }
     next() {
-        return this.focused.editable ? $ad629f541014e2e9$var$form.next.call(this) : super.next();
+        return this.focused.editable ? $ebe3f87624834f99$var$form.next.call(this) : super.next();
     }
     prev() {
-        return this.focused.editable ? $ad629f541014e2e9$var$form.prev.call(this) : super.prev();
+        return this.focused.editable ? $ebe3f87624834f99$var$form.prev.call(this) : super.prev();
     }
     async indicator(choice, i) {
         let symbol = choice.indicator || "";
@@ -3248,7 +3244,7 @@ class $ad629f541014e2e9$var$Editable extends $7ntix {
     }
     async renderChoice(choice, i) {
         choice.indent = "";
-        if (choice.editable) return $ad629f541014e2e9$var$form.renderChoice.call(this, choice, i);
+        if (choice.editable) return $ebe3f87624834f99$var$form.renderChoice.call(this, choice, i);
         return super.renderChoice(choice, i);
     }
     error() {
@@ -3287,17 +3283,17 @@ class $ad629f541014e2e9$var$Editable extends $7ntix {
         return this.base.submit.call(this);
     }
 }
-module.exports = $ad629f541014e2e9$var$Editable;
+module.exports = $ebe3f87624834f99$var$Editable;
 
 });
 
-parcelRegister("j2IWD", function(module, exports) {
+parcelRegister("1AbW6", function(module, exports) {
 "use strict";
 
-var $lKZ34 = parcelRequire("lKZ34");
+var $gK2ng = parcelRequire("gK2ng");
 
-var $jHF5b = parcelRequire("jHF5b");
-class $ddd1114be9e259ad$var$Input extends $lKZ34 {
+var $3Xb1j = parcelRequire("3Xb1j");
+class $12726984dfe721c2$var$Input extends $gK2ng {
     constructor(options){
         super(options);
         let history = this.options.history;
@@ -3314,7 +3310,7 @@ class $ddd1114be9e259ad$var$Input extends $lKZ34 {
     }
     completion(action) {
         if (!this.store) return this.alert();
-        this.data = $jHF5b(action, this.data, this.input);
+        this.data = $3Xb1j(action, this.data, this.input);
         if (!this.data.present) return this.alert();
         this.input = this.data.present;
         this.cursor = this.input.length;
@@ -3332,7 +3328,7 @@ class $ddd1114be9e259ad$var$Input extends $lKZ34 {
     }
     save() {
         if (!this.store) return;
-        this.data = $jHF5b("save", this.data, this.input);
+        this.data = $3Xb1j("save", this.data, this.input);
         this.store.set("values", this.data);
     }
     submit() {
@@ -3340,30 +3336,30 @@ class $ddd1114be9e259ad$var$Input extends $lKZ34 {
         return super.submit();
     }
 }
-module.exports = $ddd1114be9e259ad$var$Input;
+module.exports = $12726984dfe721c2$var$Input;
 
 });
-parcelRegister("lKZ34", function(module, exports) {
+parcelRegister("gK2ng", function(module, exports) {
 "use strict";
 
-var $aQOyv = parcelRequire("aQOyv");
+var $3fCUp = parcelRequire("3fCUp");
 
-var $7veJH = parcelRequire("7veJH");
+var $iZUzo = parcelRequire("iZUzo");
 
-var $d2Xe8 = parcelRequire("d2Xe8");
+var $fFJEH = parcelRequire("fFJEH");
 
-var $k7DM2 = parcelRequire("k7DM2");
-var $fd6d3fd443aefdf8$require$isPrimitive = $k7DM2.isPrimitive;
-class $fd6d3fd443aefdf8$var$StringPrompt extends $aQOyv {
+var $h91fL = parcelRequire("h91fL");
+var $c302c8adfb78b4ff$require$isPrimitive = $h91fL.isPrimitive;
+class $c302c8adfb78b4ff$var$StringPrompt extends $3fCUp {
     constructor(options){
         super(options);
-        this.initial = $fd6d3fd443aefdf8$require$isPrimitive(this.initial) ? String(this.initial) : "";
+        this.initial = $c302c8adfb78b4ff$require$isPrimitive(this.initial) ? String(this.initial) : "";
         if (this.initial) this.cursorHide();
         this.state.prevCursor = 0;
         this.state.clipboard = [];
         this.keypressTimeout = this.options.keypressTimeout !== undefined ? this.options.keypressTimeout : null;
     }
-    async keypress(input, key = input ? $7veJH(input, {}) : {}) {
+    async keypress(input, key = input ? $iZUzo(input, {}) : {}) {
         const now = Date.now();
         const elapsed = now - this.lastKeypress;
         this.lastKeypress = now;
@@ -3491,7 +3487,7 @@ class $fd6d3fd443aefdf8$var$StringPrompt extends $aQOyv {
     }
     async format(input = this.value) {
         let initial = await this.resolve(this.initial, this.state);
-        if (!this.state.submitted) return $d2Xe8(this, {
+        if (!this.state.submitted) return $fFJEH(this, {
             input: input,
             initial: initial,
             pos: this.cursor
@@ -3524,14 +3520,14 @@ class $fd6d3fd443aefdf8$var$StringPrompt extends $aQOyv {
         this.restore();
     }
 }
-module.exports = $fd6d3fd443aefdf8$var$StringPrompt;
+module.exports = $c302c8adfb78b4ff$var$StringPrompt;
 
 });
 
-parcelRegister("jHF5b", function(module, exports) {
+parcelRegister("3Xb1j", function(module, exports) {
 "use strict";
-const $e581e6a16c7c6c71$var$unique = (arr)=>arr.filter((v, i)=>arr.lastIndexOf(v) === i);
-const $e581e6a16c7c6c71$var$compact = (arr)=>$e581e6a16c7c6c71$var$unique(arr).filter(Boolean);
+const $2e0f6e25380183ec$var$unique = (arr)=>arr.filter((v, i)=>arr.lastIndexOf(v) === i);
+const $2e0f6e25380183ec$var$compact = (arr)=>$2e0f6e25380183ec$var$unique(arr).filter(Boolean);
 module.exports = (action, data = {}, value = "")=>{
     let { past: past = [], present: present = "" } = data;
     let rest, prev;
@@ -3541,7 +3537,7 @@ module.exports = (action, data = {}, value = "")=>{
             rest = past.slice(0, past.length - 1);
             prev = past[past.length - 1] || "";
             return {
-                past: $e581e6a16c7c6c71$var$compact([
+                past: $2e0f6e25380183ec$var$compact([
                     value,
                     ...rest
                 ]),
@@ -3552,7 +3548,7 @@ module.exports = (action, data = {}, value = "")=>{
             rest = past.slice(1);
             prev = past[0] || "";
             return {
-                past: $e581e6a16c7c6c71$var$compact([
+                past: $2e0f6e25380183ec$var$compact([
                     ...rest,
                     value
                 ]),
@@ -3560,14 +3556,14 @@ module.exports = (action, data = {}, value = "")=>{
             };
         case "save":
             return {
-                past: $e581e6a16c7c6c71$var$compact([
+                past: $2e0f6e25380183ec$var$compact([
                     ...past,
                     value
                 ]),
                 present: ""
             };
         case "remove":
-            prev = $e581e6a16c7c6c71$var$compact(past.filter((v)=>v !== value));
+            prev = $2e0f6e25380183ec$var$compact(past.filter((v)=>v !== value));
             present = "";
             if (prev.length) present = prev.pop();
             return {
@@ -3582,24 +3578,24 @@ module.exports = (action, data = {}, value = "")=>{
 });
 
 
-parcelRegister("eUdyi", function(module, exports) {
+parcelRegister("hOkSq", function(module, exports) {
 "use strict";
 
-var $lKZ34 = parcelRequire("lKZ34");
-class $ada0cece6a7ad28c$var$InvisiblePrompt extends $lKZ34 {
+var $gK2ng = parcelRequire("gK2ng");
+class $cf774cdc38196eeb$var$InvisiblePrompt extends $gK2ng {
     format() {
         return "";
     }
 }
-module.exports = $ada0cece6a7ad28c$var$InvisiblePrompt;
+module.exports = $cf774cdc38196eeb$var$InvisiblePrompt;
 
 });
 
-parcelRegister("5aLSO", function(module, exports) {
+parcelRegister("kQSAh", function(module, exports) {
 "use strict";
 
-var $lKZ34 = parcelRequire("lKZ34");
-class $3c43077b7c322f6d$var$ListPrompt extends $lKZ34 {
+var $gK2ng = parcelRequire("gK2ng");
+class $f2e3013e33b751ea$var$ListPrompt extends $gK2ng {
     constructor(options = {}){
         super(options);
         this.sep = this.options.separator || /, */;
@@ -3625,15 +3621,15 @@ class $3c43077b7c322f6d$var$ListPrompt extends $lKZ34 {
         return this.split();
     }
 }
-module.exports = $3c43077b7c322f6d$var$ListPrompt;
+module.exports = $f2e3013e33b751ea$var$ListPrompt;
 
 });
 
-parcelRegister("6Acnj", function(module, exports) {
+parcelRegister("lkCXa", function(module, exports) {
 "use strict";
 
-var $7ntix = parcelRequire("7ntix");
-class $4cafb447fdc72c32$var$MultiSelect extends $7ntix {
+var $81q1B = parcelRequire("81q1B");
+class $f879ae8dd7aab4e5$var$MultiSelect extends $81q1B {
     constructor(options){
         super({
             ...options,
@@ -3641,20 +3637,20 @@ class $4cafb447fdc72c32$var$MultiSelect extends $7ntix {
         });
     }
 }
-module.exports = $4cafb447fdc72c32$var$MultiSelect;
+module.exports = $f879ae8dd7aab4e5$var$MultiSelect;
 
 });
 
-parcelRegister("kIJlw", function(module, exports) {
+parcelRegister("f3ce0", function(module, exports) {
 
-module.exports = (parcelRequire("6LGxE"));
+module.exports = (parcelRequire("hei2V"));
 
 });
-parcelRegister("6LGxE", function(module, exports) {
+parcelRegister("hei2V", function(module, exports) {
 "use strict";
 
-var $lKZ34 = parcelRequire("lKZ34");
-class $4ed821c1808bb6ec$var$NumberPrompt extends $lKZ34 {
+var $gK2ng = parcelRequire("gK2ng");
+class $c8b1be16642d0a06$var$NumberPrompt extends $gK2ng {
     constructor(options = {}){
         super({
             style: "number",
@@ -3725,16 +3721,16 @@ class $4ed821c1808bb6ec$var$NumberPrompt extends $lKZ34 {
         return super.submit();
     }
 }
-module.exports = $4ed821c1808bb6ec$var$NumberPrompt;
+module.exports = $c8b1be16642d0a06$var$NumberPrompt;
 
 });
 
 
-parcelRegister("6Edg3", function(module, exports) {
+parcelRegister("4NZRQ", function(module, exports) {
 "use strict";
 
-var $lKZ34 = parcelRequire("lKZ34");
-class $4d70c340a13fc0ea$var$PasswordPrompt extends $lKZ34 {
+var $gK2ng = parcelRequire("gK2ng");
+class $37fbba9ea39ac2ea$var$PasswordPrompt extends $gK2ng {
     constructor(options){
         super(options);
         this.cursorShow();
@@ -3745,19 +3741,19 @@ class $4d70c340a13fc0ea$var$PasswordPrompt extends $lKZ34 {
         return color(this.symbols.asterisk.repeat(input.length));
     }
 }
-module.exports = $4d70c340a13fc0ea$var$PasswordPrompt;
+module.exports = $37fbba9ea39ac2ea$var$PasswordPrompt;
 
 });
 
-parcelRegister("7AnGl", function(module, exports) {
+parcelRegister("9JggT", function(module, exports) {
 "use strict";
 
-var $6jmOe = parcelRequire("6jmOe");
+var $kCxMd = parcelRequire("kCxMd");
 
-var $7etP8 = parcelRequire("7etP8");
+var $i40GR = parcelRequire("i40GR");
 
-var $k7DM2 = parcelRequire("k7DM2");
-class $585e43f418f7c3ed$var$LikertScale extends $7etP8 {
+var $h91fL = parcelRequire("h91fL");
+class $7154f02cdc93b450$var$LikertScale extends $i40GR {
     constructor(options = {}){
         super(options);
         this.widths = [].concat(options.messageWidth || 50);
@@ -3877,16 +3873,16 @@ class $585e43f418f7c3ed$var$LikertScale extends $7etP8 {
         let focused = this.index === i;
         let pointer = await this.pointer(choice, i);
         let hint = await choice.hint;
-        if (hint && !$k7DM2.hasColor(hint)) hint = this.styles.muted(hint);
+        if (hint && !$h91fL.hasColor(hint)) hint = this.styles.muted(hint);
         let pad = (str)=>this.margin[3] + str.replace(/\s+$/, "").padEnd(this.widths[0], " ");
         let newline = this.newline;
         let ind = this.indent(choice);
         let message = await this.resolve(choice.message, this.state, choice, i);
         let scale = await this.renderScale(choice, i);
         let margin = this.margin[1] + this.margin[3];
-        this.scaleLength = $6jmOe(scale).length;
+        this.scaleLength = $kCxMd(scale).length;
         this.widths[0] = Math.min(this.widths[0], this.width - this.scaleLength - margin.length);
-        let msg = $k7DM2.wordWrap(message, {
+        let msg = $h91fL.wordWrap(message, {
             width: this.widths[0],
             newline: newline
         });
@@ -3955,26 +3951,26 @@ class $585e43f418f7c3ed$var$LikertScale extends $7etP8 {
         return this.base.submit.call(this);
     }
 }
-module.exports = $585e43f418f7c3ed$var$LikertScale;
+module.exports = $7154f02cdc93b450$var$LikertScale;
 
 });
 
-parcelRegister("l4gAS", function(module, exports) {
+parcelRegister("6wCWQ", function(module, exports) {
 "use strict";
 
-var $6jmOe = parcelRequire("6jmOe");
+var $kCxMd = parcelRequire("kCxMd");
 
-var $iY7NY = parcelRequire("iY7NY");
+var $5hLWN = parcelRequire("5hLWN");
 
-var $aQOyv = parcelRequire("aQOyv");
-class $f566d7df6419a380$var$SnippetPrompt extends $aQOyv {
+var $3fCUp = parcelRequire("3fCUp");
+class $4c03f18665bb24b3$var$SnippetPrompt extends $3fCUp {
     constructor(options){
         super(options);
         this.cursorHide();
         this.reset(true);
     }
     async initialize() {
-        this.interpolate = await $iY7NY(this);
+        this.interpolate = await $5hLWN(this);
         await super.initialize();
     }
     async reset(first) {
@@ -4122,7 +4118,7 @@ class $f566d7df6419a380$var$SnippetPrompt extends $aQOyv {
             ].join(", ");
             return super.submit();
         }
-        let lines = $6jmOe(output).split("\n");
+        let lines = $kCxMd(output).split("\n");
         let result = lines.map((v)=>v.slice(1)).join("\n");
         this.value = {
             values: values,
@@ -4131,31 +4127,31 @@ class $f566d7df6419a380$var$SnippetPrompt extends $aQOyv {
         return super.submit();
     }
 }
-module.exports = $f566d7df6419a380$var$SnippetPrompt;
+module.exports = $4c03f18665bb24b3$var$SnippetPrompt;
 
 });
-parcelRegister("iY7NY", function(module, exports) {
+parcelRegister("5hLWN", function(module, exports) {
 "use strict";
 
-var $6jmOe = parcelRequire("6jmOe");
-const $dcf3e27db81522de$var$clean = (str = "")=>{
+var $kCxMd = parcelRequire("kCxMd");
+const $3d93bb9faf6097df$var$clean = (str = "")=>{
     return typeof str === "string" ? str.replace(/^['"]|['"]$/g, "") : "";
 };
 /**
  * This file contains the interpolation and rendering logic for
  * the Snippet prompt.
- */ class $dcf3e27db81522de$var$Item {
+ */ class $3d93bb9faf6097df$var$Item {
     constructor(token){
         this.name = token.key;
         this.field = token.field || {};
-        this.value = $dcf3e27db81522de$var$clean(token.initial || this.field.initial || "");
+        this.value = $3d93bb9faf6097df$var$clean(token.initial || this.field.initial || "");
         this.message = token.message || this.name;
         this.cursor = 0;
         this.input = "";
         this.lines = [];
     }
 }
-const $dcf3e27db81522de$var$tokenize = async (options = {}, defaults = {}, fn = (token)=>token)=>{
+const $3d93bb9faf6097df$var$tokenize = async (options = {}, defaults = {}, fn = (token)=>token)=>{
     let unique = new Set();
     let fields = options.fields || [];
     let input = options.template;
@@ -4235,7 +4231,7 @@ const $dcf3e27db81522de$var$tokenize = async (options = {}, defaults = {}, fn = 
             let item = items.find((item)=>item.name === token.key);
             token.field = fields.find((ch)=>ch.name === token.key);
             if (!item) {
-                item = new $dcf3e27db81522de$var$Item(token);
+                item = new $3d93bb9faf6097df$var$Item(token);
                 items.push(item);
             }
             item.lines.push(token.line - 1);
@@ -4267,10 +4263,10 @@ module.exports = async (prompt)=>{
         ...options.values,
         ...options.initial
     };
-    let { tabstops: tabstops, items: items, keys: keys } = await $dcf3e27db81522de$var$tokenize(options, defaults);
-    let result = $dcf3e27db81522de$var$createFn("result", prompt, options);
-    let format = $dcf3e27db81522de$var$createFn("format", prompt, options);
-    let isValid = $dcf3e27db81522de$var$createFn("validate", prompt, options, true);
+    let { tabstops: tabstops, items: items, keys: keys } = await $3d93bb9faf6097df$var$tokenize(options, defaults);
+    let result = $3d93bb9faf6097df$var$createFn("result", prompt, options);
+    let format = $3d93bb9faf6097df$var$createFn("format", prompt, options);
+    let isValid = $3d93bb9faf6097df$var$createFn("validate", prompt, options, true);
     let isVal = prompt.isValue.bind(prompt);
     return async (state = {}, submitted = false)=>{
         let index = 0;
@@ -4309,7 +4305,7 @@ module.exports = async (prompt)=>{
                     }
                     state.invalid.delete(key);
                     let res = await result(state.values[key], state, item, index);
-                    state.output += $6jmOe(res);
+                    state.output += $kCxMd(res);
                     continue;
                 }
                 item.placeholder = false;
@@ -4330,7 +4326,7 @@ module.exports = async (prompt)=>{
                 if (state.invalid.has(key) && state.validating) value = prompt.styles.danger(val);
                 if (index === state.index) {
                     if (before !== value) value = prompt.styles.underline(value);
-                    else value = prompt.styles.heading($6jmOe(value));
+                    else value = prompt.styles.heading($kCxMd(value));
                 }
                 index++;
             }
@@ -4351,7 +4347,7 @@ module.exports = async (prompt)=>{
         return state.output;
     };
 };
-function $dcf3e27db81522de$var$createFn(prop, prompt, options, fallback) {
+function $3d93bb9faf6097df$var$createFn(prop, prompt, options, fallback) {
     return (value, state, item, index)=>{
         if (typeof item.field[prop] === "function") return item.field[prop].call(prompt, value, state, item, index);
         return [
@@ -4364,12 +4360,12 @@ function $dcf3e27db81522de$var$createFn(prop, prompt, options, fallback) {
 });
 
 
-parcelRegister("3Sw4S", function(module, exports) {
+parcelRegister("3kq2T", function(module, exports) {
 "use strict";
-const $2d2f4c381b7c2f01$var$hint = "(Use <shift>+<up/down> to sort)";
+const $26c771766291aca6$var$hint = "(Use <shift>+<up/down> to sort)";
 
-var $7ntix = parcelRequire("7ntix");
-class $2d2f4c381b7c2f01$var$Sort extends $7ntix {
+var $81q1B = parcelRequire("81q1B");
+class $26c771766291aca6$var$Sort extends $81q1B {
     constructor(options){
         super({
             ...options,
@@ -4379,7 +4375,7 @@ class $2d2f4c381b7c2f01$var$Sort extends $7ntix {
         });
         this.state.hint = [
             this.options.hint,
-            $2d2f4c381b7c2f01$var$hint
+            $26c771766291aca6$var$hint
         ].find(this.isValue.bind(this));
     }
     indicator() {
@@ -4401,15 +4397,15 @@ class $2d2f4c381b7c2f01$var$Sort extends $7ntix {
         return super.submit();
     }
 }
-module.exports = $2d2f4c381b7c2f01$var$Sort;
+module.exports = $26c771766291aca6$var$Sort;
 
 });
 
-parcelRegister("aBcZL", function(module, exports) {
+parcelRegister("10WNd", function(module, exports) {
 "use strict";
 
-var $7etP8 = parcelRequire("7etP8");
-class $7b7770a5766d285c$var$Survey extends $7etP8 {
+var $i40GR = parcelRequire("i40GR");
+class $0bd3658d0bae2b04$var$Survey extends $i40GR {
     constructor(options = {}){
         super(options);
         this.emptyError = options.emptyError || "No items were selected";
@@ -4433,7 +4429,7 @@ class $7b7770a5766d285c$var$Survey extends $7etP8 {
         this.createdScales = true;
         let choices = await super.toChoices(...args);
         for (let choice of choices){
-            choice.scale = $7b7770a5766d285c$var$createScale(5, this.options);
+            choice.scale = $0bd3658d0bae2b04$var$createScale(5, this.options);
             choice.scaleIdx = 2;
         }
         return choices;
@@ -4553,7 +4549,7 @@ class $7b7770a5766d285c$var$Survey extends $7etP8 {
         return this.base.submit.call(this);
     }
 }
-function $7b7770a5766d285c$var$createScale(n, options = {}) {
+function $0bd3658d0bae2b04$var$createScale(n, options = {}) {
     if (Array.isArray(options.scale)) return options.scale.map((ele)=>({
             ...ele
         }));
@@ -4564,21 +4560,21 @@ function $7b7770a5766d285c$var$createScale(n, options = {}) {
     });
     return scale;
 }
-module.exports = $7b7770a5766d285c$var$Survey;
+module.exports = $0bd3658d0bae2b04$var$Survey;
 
 });
 
-parcelRegister("kEsiz", function(module, exports) {
+parcelRegister("4MK8D", function(module, exports) {
 
-module.exports = (parcelRequire("j2IWD"));
+module.exports = (parcelRequire("1AbW6"));
 
 });
 
-parcelRegister("6fI3r", function(module, exports) {
+parcelRegister("aeyjP", function(module, exports) {
 "use strict";
 
-var $8IC69 = parcelRequire("8IC69");
-class $48d6511c76868433$var$TogglePrompt extends $8IC69 {
+var $6gAgM = parcelRequire("6gAgM");
+class $7735d52a86cabd3c$var$TogglePrompt extends $6gAgM {
     async initialize() {
         await super.initialize();
         this.value = this.initial = this.resolve(this.options.initial);
@@ -4676,15 +4672,15 @@ class $48d6511c76868433$var$TogglePrompt extends $8IC69 {
         this.restore();
     }
 }
-module.exports = $48d6511c76868433$var$TogglePrompt;
+module.exports = $7735d52a86cabd3c$var$TogglePrompt;
 
 });
 
-parcelRegister("52YC1", function(module, exports) {
+parcelRegister("lCQag", function(module, exports) {
 "use strict";
 
-var $7ntix = parcelRequire("7ntix");
-class $3acc280195dc1417$var$Quiz extends $7ntix {
+var $81q1B = parcelRequire("81q1B");
+class $fbe59c5b1acd45b8$var$Quiz extends $81q1B {
     constructor(options){
         super(options);
         if (typeof this.options.correctChoice !== "number" || this.options.correctChoice < 0) throw new Error("Please specify the index of the correct answer from the list of choices");
@@ -4706,38 +4702,34 @@ class $3acc280195dc1417$var$Quiz extends $7ntix {
         };
     }
 }
-module.exports = $3acc280195dc1417$var$Quiz;
+module.exports = $fbe59c5b1acd45b8$var$Quiz;
 
 });
 
 
-parcelRegister("jYXeY", function(module, exports) {
+parcelRegister("hZrYo", function(module, exports) {
 
 
 
 
 
 module.exports = {
-    ArrayPrompt: (parcelRequire("7etP8")),
-    AuthPrompt: (parcelRequire("eqclx")),
-    BooleanPrompt: (parcelRequire("8IC69")),
-    NumberPrompt: (parcelRequire("6LGxE")),
-    StringPrompt: (parcelRequire("lKZ34"))
+    ArrayPrompt: (parcelRequire("i40GR")),
+    AuthPrompt: (parcelRequire("1xU82")),
+    BooleanPrompt: (parcelRequire("6gAgM")),
+    NumberPrompt: (parcelRequire("hei2V")),
+    StringPrompt: (parcelRequire("gK2ng"))
 };
 
 });
 
 
-$parcel$defineInteropFlag(module.exports);
 
-$parcel$export(module.exports, "default", () => $c96ac4a5e84018b3$export$2e2bcd8739ae039);
-
-
-const $b4459cb5baeb3567$var$ANSI_BACKGROUND_OFFSET = 10;
-const $b4459cb5baeb3567$var$wrapAnsi16 = (offset = 0)=>(code)=>`\u001B[${code + offset}m`;
-const $b4459cb5baeb3567$var$wrapAnsi256 = (offset = 0)=>(code)=>`\u001B[${38 + offset};5;${code}m`;
-const $b4459cb5baeb3567$var$wrapAnsi16m = (offset = 0)=>(red, green, blue)=>`\u001B[${38 + offset};2;${red};${green};${blue}m`;
-const $b4459cb5baeb3567$var$styles = {
+const $9c3e7af7d824669d$var$ANSI_BACKGROUND_OFFSET = 10;
+const $9c3e7af7d824669d$var$wrapAnsi16 = (offset = 0)=>(code)=>`\u001B[${code + offset}m`;
+const $9c3e7af7d824669d$var$wrapAnsi256 = (offset = 0)=>(code)=>`\u001B[${38 + offset};5;${code}m`;
+const $9c3e7af7d824669d$var$wrapAnsi16m = (offset = 0)=>(red, green, blue)=>`\u001B[${38 + offset};2;${red};${green};${blue}m`;
+const $9c3e7af7d824669d$var$styles = {
     modifier: {
         reset: [
             0,
@@ -4928,43 +4920,43 @@ const $b4459cb5baeb3567$var$styles = {
         ]
     }
 };
-const $b4459cb5baeb3567$export$3348c8f862b779ea = Object.keys($b4459cb5baeb3567$var$styles.modifier);
-const $b4459cb5baeb3567$export$b42573f554ad2328 = Object.keys($b4459cb5baeb3567$var$styles.color);
-const $b4459cb5baeb3567$export$e9149c7dc90ec5a1 = Object.keys($b4459cb5baeb3567$var$styles.bgColor);
-const $b4459cb5baeb3567$export$88bbe6beac980300 = [
-    ...$b4459cb5baeb3567$export$b42573f554ad2328,
-    ...$b4459cb5baeb3567$export$e9149c7dc90ec5a1
+const $9c3e7af7d824669d$export$3348c8f862b779ea = Object.keys($9c3e7af7d824669d$var$styles.modifier);
+const $9c3e7af7d824669d$export$b42573f554ad2328 = Object.keys($9c3e7af7d824669d$var$styles.color);
+const $9c3e7af7d824669d$export$e9149c7dc90ec5a1 = Object.keys($9c3e7af7d824669d$var$styles.bgColor);
+const $9c3e7af7d824669d$export$88bbe6beac980300 = [
+    ...$9c3e7af7d824669d$export$b42573f554ad2328,
+    ...$9c3e7af7d824669d$export$e9149c7dc90ec5a1
 ];
-function $b4459cb5baeb3567$var$assembleStyles() {
+function $9c3e7af7d824669d$var$assembleStyles() {
     const codes = new Map();
-    for (const [groupName, group] of Object.entries($b4459cb5baeb3567$var$styles)){
+    for (const [groupName, group] of Object.entries($9c3e7af7d824669d$var$styles)){
         for (const [styleName, style] of Object.entries(group)){
-            $b4459cb5baeb3567$var$styles[styleName] = {
+            $9c3e7af7d824669d$var$styles[styleName] = {
                 open: `\u001B[${style[0]}m`,
                 close: `\u001B[${style[1]}m`
             };
-            group[styleName] = $b4459cb5baeb3567$var$styles[styleName];
+            group[styleName] = $9c3e7af7d824669d$var$styles[styleName];
             codes.set(style[0], style[1]);
         }
-        Object.defineProperty($b4459cb5baeb3567$var$styles, groupName, {
+        Object.defineProperty($9c3e7af7d824669d$var$styles, groupName, {
             value: group,
             enumerable: false
         });
     }
-    Object.defineProperty($b4459cb5baeb3567$var$styles, "codes", {
+    Object.defineProperty($9c3e7af7d824669d$var$styles, "codes", {
         value: codes,
         enumerable: false
     });
-    $b4459cb5baeb3567$var$styles.color.close = "\x1b[39m";
-    $b4459cb5baeb3567$var$styles.bgColor.close = "\x1b[49m";
-    $b4459cb5baeb3567$var$styles.color.ansi = $b4459cb5baeb3567$var$wrapAnsi16();
-    $b4459cb5baeb3567$var$styles.color.ansi256 = $b4459cb5baeb3567$var$wrapAnsi256();
-    $b4459cb5baeb3567$var$styles.color.ansi16m = $b4459cb5baeb3567$var$wrapAnsi16m();
-    $b4459cb5baeb3567$var$styles.bgColor.ansi = $b4459cb5baeb3567$var$wrapAnsi16($b4459cb5baeb3567$var$ANSI_BACKGROUND_OFFSET);
-    $b4459cb5baeb3567$var$styles.bgColor.ansi256 = $b4459cb5baeb3567$var$wrapAnsi256($b4459cb5baeb3567$var$ANSI_BACKGROUND_OFFSET);
-    $b4459cb5baeb3567$var$styles.bgColor.ansi16m = $b4459cb5baeb3567$var$wrapAnsi16m($b4459cb5baeb3567$var$ANSI_BACKGROUND_OFFSET);
+    $9c3e7af7d824669d$var$styles.color.close = "\x1b[39m";
+    $9c3e7af7d824669d$var$styles.bgColor.close = "\x1b[49m";
+    $9c3e7af7d824669d$var$styles.color.ansi = $9c3e7af7d824669d$var$wrapAnsi16();
+    $9c3e7af7d824669d$var$styles.color.ansi256 = $9c3e7af7d824669d$var$wrapAnsi256();
+    $9c3e7af7d824669d$var$styles.color.ansi16m = $9c3e7af7d824669d$var$wrapAnsi16m();
+    $9c3e7af7d824669d$var$styles.bgColor.ansi = $9c3e7af7d824669d$var$wrapAnsi16($9c3e7af7d824669d$var$ANSI_BACKGROUND_OFFSET);
+    $9c3e7af7d824669d$var$styles.bgColor.ansi256 = $9c3e7af7d824669d$var$wrapAnsi256($9c3e7af7d824669d$var$ANSI_BACKGROUND_OFFSET);
+    $9c3e7af7d824669d$var$styles.bgColor.ansi16m = $9c3e7af7d824669d$var$wrapAnsi16m($9c3e7af7d824669d$var$ANSI_BACKGROUND_OFFSET);
     // From https://github.com/Qix-/color-convert/blob/3f0e0d4e92e235796ccb17f6e85c72094a651f49/conversions.js
-    Object.defineProperties($b4459cb5baeb3567$var$styles, {
+    Object.defineProperties($9c3e7af7d824669d$var$styles, {
         rgbToAnsi256: {
             value (red, green, blue) {
                 // We use the extended greyscale palette here, with the exception of
@@ -5000,7 +4992,7 @@ function $b4459cb5baeb3567$var$assembleStyles() {
             enumerable: false
         },
         hexToAnsi256: {
-            value: (hex)=>$b4459cb5baeb3567$var$styles.rgbToAnsi256(...$b4459cb5baeb3567$var$styles.hexToRgb(hex)),
+            value: (hex)=>$9c3e7af7d824669d$var$styles.rgbToAnsi256(...$9c3e7af7d824669d$var$styles.hexToRgb(hex)),
             enumerable: false
         },
         ansi256ToAnsi: {
@@ -5031,18 +5023,18 @@ function $b4459cb5baeb3567$var$assembleStyles() {
             enumerable: false
         },
         rgbToAnsi: {
-            value: (red, green, blue)=>$b4459cb5baeb3567$var$styles.ansi256ToAnsi($b4459cb5baeb3567$var$styles.rgbToAnsi256(red, green, blue)),
+            value: (red, green, blue)=>$9c3e7af7d824669d$var$styles.ansi256ToAnsi($9c3e7af7d824669d$var$styles.rgbToAnsi256(red, green, blue)),
             enumerable: false
         },
         hexToAnsi: {
-            value: (hex)=>$b4459cb5baeb3567$var$styles.ansi256ToAnsi($b4459cb5baeb3567$var$styles.hexToAnsi256(hex)),
+            value: (hex)=>$9c3e7af7d824669d$var$styles.ansi256ToAnsi($9c3e7af7d824669d$var$styles.hexToAnsi256(hex)),
             enumerable: false
         }
     });
-    return $b4459cb5baeb3567$var$styles;
+    return $9c3e7af7d824669d$var$styles;
 }
-const $b4459cb5baeb3567$var$ansiStyles = $b4459cb5baeb3567$var$assembleStyles();
-var $b4459cb5baeb3567$export$2e2bcd8739ae039 = $b4459cb5baeb3567$var$ansiStyles;
+const $9c3e7af7d824669d$var$ansiStyles = $9c3e7af7d824669d$var$assembleStyles();
+var $9c3e7af7d824669d$export$2e2bcd8739ae039 = $9c3e7af7d824669d$var$ansiStyles;
 
 
 
@@ -5050,24 +5042,24 @@ var $b4459cb5baeb3567$export$2e2bcd8739ae039 = $b4459cb5baeb3567$var$ansiStyles;
 
 // From: https://github.com/sindresorhus/has-flag/blob/main/index.js
 /// function hasFlag(flag, argv = globalThis.Deno?.args ?? process.argv) {
-function $7eaf849cc63adb99$var$hasFlag(flag, argv = globalThis.Deno ? globalThis.Deno.args : (0, ($parcel$interopDefault($jvxZj$nodeprocess))).argv) {
+function $c4d8e5a311b56e5c$var$hasFlag(flag, argv = globalThis.Deno ? globalThis.Deno.args : (0, $4hQOU$nodeprocess).argv) {
     const prefix = flag.startsWith("-") ? "" : flag.length === 1 ? "-" : "--";
     const position = argv.indexOf(prefix + flag);
     const terminatorPosition = argv.indexOf("--");
     return position !== -1 && (terminatorPosition === -1 || position < terminatorPosition);
 }
-const { env: $7eaf849cc63adb99$var$env } = (0, ($parcel$interopDefault($jvxZj$nodeprocess)));
-let $7eaf849cc63adb99$var$flagForceColor;
-if ($7eaf849cc63adb99$var$hasFlag("no-color") || $7eaf849cc63adb99$var$hasFlag("no-colors") || $7eaf849cc63adb99$var$hasFlag("color=false") || $7eaf849cc63adb99$var$hasFlag("color=never")) $7eaf849cc63adb99$var$flagForceColor = 0;
-else if ($7eaf849cc63adb99$var$hasFlag("color") || $7eaf849cc63adb99$var$hasFlag("colors") || $7eaf849cc63adb99$var$hasFlag("color=true") || $7eaf849cc63adb99$var$hasFlag("color=always")) $7eaf849cc63adb99$var$flagForceColor = 1;
-function $7eaf849cc63adb99$var$envForceColor() {
-    if ("FORCE_COLOR" in $7eaf849cc63adb99$var$env) {
-        if ($7eaf849cc63adb99$var$env.FORCE_COLOR === "true") return 1;
-        if ($7eaf849cc63adb99$var$env.FORCE_COLOR === "false") return 0;
-        return $7eaf849cc63adb99$var$env.FORCE_COLOR.length === 0 ? 1 : Math.min(Number.parseInt($7eaf849cc63adb99$var$env.FORCE_COLOR, 10), 3);
+const { env: $c4d8e5a311b56e5c$var$env } = (0, $4hQOU$nodeprocess);
+let $c4d8e5a311b56e5c$var$flagForceColor;
+if ($c4d8e5a311b56e5c$var$hasFlag("no-color") || $c4d8e5a311b56e5c$var$hasFlag("no-colors") || $c4d8e5a311b56e5c$var$hasFlag("color=false") || $c4d8e5a311b56e5c$var$hasFlag("color=never")) $c4d8e5a311b56e5c$var$flagForceColor = 0;
+else if ($c4d8e5a311b56e5c$var$hasFlag("color") || $c4d8e5a311b56e5c$var$hasFlag("colors") || $c4d8e5a311b56e5c$var$hasFlag("color=true") || $c4d8e5a311b56e5c$var$hasFlag("color=always")) $c4d8e5a311b56e5c$var$flagForceColor = 1;
+function $c4d8e5a311b56e5c$var$envForceColor() {
+    if ("FORCE_COLOR" in $c4d8e5a311b56e5c$var$env) {
+        if ($c4d8e5a311b56e5c$var$env.FORCE_COLOR === "true") return 1;
+        if ($c4d8e5a311b56e5c$var$env.FORCE_COLOR === "false") return 0;
+        return $c4d8e5a311b56e5c$var$env.FORCE_COLOR.length === 0 ? 1 : Math.min(Number.parseInt($c4d8e5a311b56e5c$var$env.FORCE_COLOR, 10), 3);
     }
 }
-function $7eaf849cc63adb99$var$translateLevel(level) {
+function $c4d8e5a311b56e5c$var$translateLevel(level) {
     if (level === 0) return false;
     return {
         level: level,
@@ -5076,30 +5068,30 @@ function $7eaf849cc63adb99$var$translateLevel(level) {
         has16m: level >= 3
     };
 }
-function $7eaf849cc63adb99$var$_supportsColor(haveStream, { streamIsTTY: streamIsTTY, sniffFlags: sniffFlags = true } = {}) {
-    const noFlagForceColor = $7eaf849cc63adb99$var$envForceColor();
-    if (noFlagForceColor !== undefined) $7eaf849cc63adb99$var$flagForceColor = noFlagForceColor;
-    const forceColor = sniffFlags ? $7eaf849cc63adb99$var$flagForceColor : noFlagForceColor;
+function $c4d8e5a311b56e5c$var$_supportsColor(haveStream, { streamIsTTY: streamIsTTY, sniffFlags: sniffFlags = true } = {}) {
+    const noFlagForceColor = $c4d8e5a311b56e5c$var$envForceColor();
+    if (noFlagForceColor !== undefined) $c4d8e5a311b56e5c$var$flagForceColor = noFlagForceColor;
+    const forceColor = sniffFlags ? $c4d8e5a311b56e5c$var$flagForceColor : noFlagForceColor;
     if (forceColor === 0) return 0;
     if (sniffFlags) {
-        if ($7eaf849cc63adb99$var$hasFlag("color=16m") || $7eaf849cc63adb99$var$hasFlag("color=full") || $7eaf849cc63adb99$var$hasFlag("color=truecolor")) return 3;
-        if ($7eaf849cc63adb99$var$hasFlag("color=256")) return 2;
+        if ($c4d8e5a311b56e5c$var$hasFlag("color=16m") || $c4d8e5a311b56e5c$var$hasFlag("color=full") || $c4d8e5a311b56e5c$var$hasFlag("color=truecolor")) return 3;
+        if ($c4d8e5a311b56e5c$var$hasFlag("color=256")) return 2;
     }
     // Check for Azure DevOps pipelines.
     // Has to be above the `!streamIsTTY` check.
-    if ("TF_BUILD" in $7eaf849cc63adb99$var$env && "AGENT_NAME" in $7eaf849cc63adb99$var$env) return 1;
+    if ("TF_BUILD" in $c4d8e5a311b56e5c$var$env && "AGENT_NAME" in $c4d8e5a311b56e5c$var$env) return 1;
     if (haveStream && !streamIsTTY && forceColor === undefined) return 0;
     const min = forceColor || 0;
-    if ($7eaf849cc63adb99$var$env.TERM === "dumb") return min;
-    if ((0, ($parcel$interopDefault($jvxZj$nodeprocess))).platform === "win32") {
+    if ($c4d8e5a311b56e5c$var$env.TERM === "dumb") return min;
+    if ((0, $4hQOU$nodeprocess).platform === "win32") {
         // Windows 10 build 10586 is the first Windows release that supports 256 colors.
         // Windows 10 build 14931 is the first release that supports 16m/TrueColor.
-        const osRelease = (0, ($parcel$interopDefault($jvxZj$nodeos))).release().split(".");
+        const osRelease = (0, $4hQOU$nodeos).release().split(".");
         if (Number(osRelease[0]) >= 10 && Number(osRelease[2]) >= 10586) return Number(osRelease[2]) >= 14931 ? 3 : 2;
         return 1;
     }
-    if ("CI" in $7eaf849cc63adb99$var$env) {
-        if ("GITHUB_ACTIONS" in $7eaf849cc63adb99$var$env || "GITEA_ACTIONS" in $7eaf849cc63adb99$var$env) return 3;
+    if ("CI" in $c4d8e5a311b56e5c$var$env) {
+        if ("GITHUB_ACTIONS" in $c4d8e5a311b56e5c$var$env || "GITEA_ACTIONS" in $c4d8e5a311b56e5c$var$env) return 3;
         if ([
             "TRAVIS",
             "CIRCLECI",
@@ -5107,46 +5099,46 @@ function $7eaf849cc63adb99$var$_supportsColor(haveStream, { streamIsTTY: streamI
             "GITLAB_CI",
             "BUILDKITE",
             "DRONE"
-        ].some((sign)=>sign in $7eaf849cc63adb99$var$env) || $7eaf849cc63adb99$var$env.CI_NAME === "codeship") return 1;
+        ].some((sign)=>sign in $c4d8e5a311b56e5c$var$env) || $c4d8e5a311b56e5c$var$env.CI_NAME === "codeship") return 1;
         return min;
     }
-    if ("TEAMCITY_VERSION" in $7eaf849cc63adb99$var$env) return /^(9\.(0*[1-9]\d*)\.|\d{2,}\.)/.test($7eaf849cc63adb99$var$env.TEAMCITY_VERSION) ? 1 : 0;
-    if ($7eaf849cc63adb99$var$env.COLORTERM === "truecolor") return 3;
-    if ($7eaf849cc63adb99$var$env.TERM === "xterm-kitty") return 3;
-    if ("TERM_PROGRAM" in $7eaf849cc63adb99$var$env) {
-        const version = Number.parseInt(($7eaf849cc63adb99$var$env.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
-        switch($7eaf849cc63adb99$var$env.TERM_PROGRAM){
+    if ("TEAMCITY_VERSION" in $c4d8e5a311b56e5c$var$env) return /^(9\.(0*[1-9]\d*)\.|\d{2,}\.)/.test($c4d8e5a311b56e5c$var$env.TEAMCITY_VERSION) ? 1 : 0;
+    if ($c4d8e5a311b56e5c$var$env.COLORTERM === "truecolor") return 3;
+    if ($c4d8e5a311b56e5c$var$env.TERM === "xterm-kitty") return 3;
+    if ("TERM_PROGRAM" in $c4d8e5a311b56e5c$var$env) {
+        const version = Number.parseInt(($c4d8e5a311b56e5c$var$env.TERM_PROGRAM_VERSION || "").split(".")[0], 10);
+        switch($c4d8e5a311b56e5c$var$env.TERM_PROGRAM){
             case "iTerm.app":
                 return version >= 3 ? 3 : 2;
             case "Apple_Terminal":
                 return 2;
         }
     }
-    if (/-256(color)?$/i.test($7eaf849cc63adb99$var$env.TERM)) return 2;
-    if (/^screen|^xterm|^vt100|^vt220|^rxvt|color|ansi|cygwin|linux/i.test($7eaf849cc63adb99$var$env.TERM)) return 1;
-    if ("COLORTERM" in $7eaf849cc63adb99$var$env) return 1;
+    if (/-256(color)?$/i.test($c4d8e5a311b56e5c$var$env.TERM)) return 2;
+    if (/^screen|^xterm|^vt100|^vt220|^rxvt|color|ansi|cygwin|linux/i.test($c4d8e5a311b56e5c$var$env.TERM)) return 1;
+    if ("COLORTERM" in $c4d8e5a311b56e5c$var$env) return 1;
     return min;
 }
-function $7eaf849cc63adb99$export$6f279ba00f1459de(stream, options = {}) {
-    const level = $7eaf849cc63adb99$var$_supportsColor(stream, {
+function $c4d8e5a311b56e5c$export$6f279ba00f1459de(stream, options = {}) {
+    const level = $c4d8e5a311b56e5c$var$_supportsColor(stream, {
         streamIsTTY: stream && stream.isTTY,
         ...options
     });
-    return $7eaf849cc63adb99$var$translateLevel(level);
+    return $c4d8e5a311b56e5c$var$translateLevel(level);
 }
-const $7eaf849cc63adb99$var$supportsColor = {
-    stdout: $7eaf849cc63adb99$export$6f279ba00f1459de({
-        isTTY: (0, ($parcel$interopDefault($jvxZj$nodetty))).isatty(1)
+const $c4d8e5a311b56e5c$var$supportsColor = {
+    stdout: $c4d8e5a311b56e5c$export$6f279ba00f1459de({
+        isTTY: (0, $4hQOU$nodetty).isatty(1)
     }),
-    stderr: $7eaf849cc63adb99$export$6f279ba00f1459de({
-        isTTY: (0, ($parcel$interopDefault($jvxZj$nodetty))).isatty(2)
+    stderr: $c4d8e5a311b56e5c$export$6f279ba00f1459de({
+        isTTY: (0, $4hQOU$nodetty).isatty(2)
     })
 };
-var $7eaf849cc63adb99$export$2e2bcd8739ae039 = $7eaf849cc63adb99$var$supportsColor;
+var $c4d8e5a311b56e5c$export$2e2bcd8739ae039 = $c4d8e5a311b56e5c$var$supportsColor;
 
 
 // TODO: When targeting Node.js 16, use `String.prototype.replaceAll`.
-function $57502c2cb11a35f7$export$9300dfb554c6c407(string, substring, replacer) {
+function $3a350480b217c6be$export$9300dfb554c6c407(string, substring, replacer) {
     let index = string.indexOf(substring);
     if (index === -1) return string;
     const substringLength = substring.length;
@@ -5160,7 +5152,7 @@ function $57502c2cb11a35f7$export$9300dfb554c6c407(string, substring, replacer) 
     returnValue += string.slice(endIndex);
     return returnValue;
 }
-function $57502c2cb11a35f7$export$ecabf4aff2e9764(string, prefix, postfix, index) {
+function $3a350480b217c6be$export$ecabf4aff2e9764(string, prefix, postfix, index) {
     let endIndex = 0;
     let returnValue = "";
     do {
@@ -5174,106 +5166,106 @@ function $57502c2cb11a35f7$export$ecabf4aff2e9764(string, prefix, postfix, index
 }
 
 
-const { stdout: $019f9e46ac796103$export$fcbe44f5d6fcebd, stderr: $019f9e46ac796103$export$8107055a758cd2bd } = (0, $7eaf849cc63adb99$export$2e2bcd8739ae039);
-const $019f9e46ac796103$var$GENERATOR = Symbol("GENERATOR");
-const $019f9e46ac796103$var$STYLER = Symbol("STYLER");
-const $019f9e46ac796103$var$IS_EMPTY = Symbol("IS_EMPTY");
+const { stdout: $c44461bbb7710b09$export$fcbe44f5d6fcebd, stderr: $c44461bbb7710b09$export$8107055a758cd2bd } = (0, $c4d8e5a311b56e5c$export$2e2bcd8739ae039);
+const $c44461bbb7710b09$var$GENERATOR = Symbol("GENERATOR");
+const $c44461bbb7710b09$var$STYLER = Symbol("STYLER");
+const $c44461bbb7710b09$var$IS_EMPTY = Symbol("IS_EMPTY");
 // `supportsColor.level` → `ansiStyles.color[name]` mapping
-const $019f9e46ac796103$var$levelMapping = [
+const $c44461bbb7710b09$var$levelMapping = [
     "ansi",
     "ansi",
     "ansi256",
     "ansi16m"
 ];
-const $019f9e46ac796103$var$styles = Object.create(null);
-const $019f9e46ac796103$var$applyOptions = (object, options = {})=>{
+const $c44461bbb7710b09$var$styles = Object.create(null);
+const $c44461bbb7710b09$var$applyOptions = (object, options = {})=>{
     if (options.level && !(Number.isInteger(options.level) && options.level >= 0 && options.level <= 3)) throw new Error("The `level` option should be an integer from 0 to 3");
     // Detect level if not set manually
-    const colorLevel = $019f9e46ac796103$export$fcbe44f5d6fcebd ? $019f9e46ac796103$export$fcbe44f5d6fcebd.level : 0;
+    const colorLevel = $c44461bbb7710b09$export$fcbe44f5d6fcebd ? $c44461bbb7710b09$export$fcbe44f5d6fcebd.level : 0;
     object.level = options.level === undefined ? colorLevel : options.level;
 };
-class $019f9e46ac796103$export$79544b80b91c2197 {
+class $c44461bbb7710b09$export$79544b80b91c2197 {
     constructor(options){
         // eslint-disable-next-line no-constructor-return
-        return $019f9e46ac796103$var$chalkFactory(options);
+        return $c44461bbb7710b09$var$chalkFactory(options);
     }
 }
-const $019f9e46ac796103$var$chalkFactory = (options)=>{
+const $c44461bbb7710b09$var$chalkFactory = (options)=>{
     const chalk = (...strings)=>strings.join(" ");
-    $019f9e46ac796103$var$applyOptions(chalk, options);
-    Object.setPrototypeOf(chalk, $019f9e46ac796103$var$createChalk.prototype);
+    $c44461bbb7710b09$var$applyOptions(chalk, options);
+    Object.setPrototypeOf(chalk, $c44461bbb7710b09$var$createChalk.prototype);
     return chalk;
 };
-function $019f9e46ac796103$var$createChalk(options) {
-    return $019f9e46ac796103$var$chalkFactory(options);
+function $c44461bbb7710b09$var$createChalk(options) {
+    return $c44461bbb7710b09$var$chalkFactory(options);
 }
-Object.setPrototypeOf($019f9e46ac796103$var$createChalk.prototype, Function.prototype);
-for (const [styleName, style] of Object.entries((0, $b4459cb5baeb3567$export$2e2bcd8739ae039)))$019f9e46ac796103$var$styles[styleName] = {
+Object.setPrototypeOf($c44461bbb7710b09$var$createChalk.prototype, Function.prototype);
+for (const [styleName, style] of Object.entries((0, $9c3e7af7d824669d$export$2e2bcd8739ae039)))$c44461bbb7710b09$var$styles[styleName] = {
     get () {
-        const builder = $019f9e46ac796103$var$createBuilder(this, $019f9e46ac796103$var$createStyler(style.open, style.close, this[$019f9e46ac796103$var$STYLER]), this[$019f9e46ac796103$var$IS_EMPTY]);
+        const builder = $c44461bbb7710b09$var$createBuilder(this, $c44461bbb7710b09$var$createStyler(style.open, style.close, this[$c44461bbb7710b09$var$STYLER]), this[$c44461bbb7710b09$var$IS_EMPTY]);
         Object.defineProperty(this, styleName, {
             value: builder
         });
         return builder;
     }
 };
-$019f9e46ac796103$var$styles.visible = {
+$c44461bbb7710b09$var$styles.visible = {
     get () {
-        const builder = $019f9e46ac796103$var$createBuilder(this, this[$019f9e46ac796103$var$STYLER], true);
+        const builder = $c44461bbb7710b09$var$createBuilder(this, this[$c44461bbb7710b09$var$STYLER], true);
         Object.defineProperty(this, "visible", {
             value: builder
         });
         return builder;
     }
 };
-const $019f9e46ac796103$var$getModelAnsi = (model, level, type, ...arguments_)=>{
+const $c44461bbb7710b09$var$getModelAnsi = (model, level, type, ...arguments_)=>{
     if (model === "rgb") {
-        if (level === "ansi16m") return (0, $b4459cb5baeb3567$export$2e2bcd8739ae039)[type].ansi16m(...arguments_);
-        if (level === "ansi256") return (0, $b4459cb5baeb3567$export$2e2bcd8739ae039)[type].ansi256((0, $b4459cb5baeb3567$export$2e2bcd8739ae039).rgbToAnsi256(...arguments_));
-        return (0, $b4459cb5baeb3567$export$2e2bcd8739ae039)[type].ansi((0, $b4459cb5baeb3567$export$2e2bcd8739ae039).rgbToAnsi(...arguments_));
+        if (level === "ansi16m") return (0, $9c3e7af7d824669d$export$2e2bcd8739ae039)[type].ansi16m(...arguments_);
+        if (level === "ansi256") return (0, $9c3e7af7d824669d$export$2e2bcd8739ae039)[type].ansi256((0, $9c3e7af7d824669d$export$2e2bcd8739ae039).rgbToAnsi256(...arguments_));
+        return (0, $9c3e7af7d824669d$export$2e2bcd8739ae039)[type].ansi((0, $9c3e7af7d824669d$export$2e2bcd8739ae039).rgbToAnsi(...arguments_));
     }
-    if (model === "hex") return $019f9e46ac796103$var$getModelAnsi("rgb", level, type, ...(0, $b4459cb5baeb3567$export$2e2bcd8739ae039).hexToRgb(...arguments_));
-    return (0, $b4459cb5baeb3567$export$2e2bcd8739ae039)[type][model](...arguments_);
+    if (model === "hex") return $c44461bbb7710b09$var$getModelAnsi("rgb", level, type, ...(0, $9c3e7af7d824669d$export$2e2bcd8739ae039).hexToRgb(...arguments_));
+    return (0, $9c3e7af7d824669d$export$2e2bcd8739ae039)[type][model](...arguments_);
 };
-const $019f9e46ac796103$var$usedModels = [
+const $c44461bbb7710b09$var$usedModels = [
     "rgb",
     "hex",
     "ansi256"
 ];
-for (const model of $019f9e46ac796103$var$usedModels){
-    $019f9e46ac796103$var$styles[model] = {
+for (const model of $c44461bbb7710b09$var$usedModels){
+    $c44461bbb7710b09$var$styles[model] = {
         get () {
             const { level: level } = this;
             return function(...arguments_) {
-                const styler = $019f9e46ac796103$var$createStyler($019f9e46ac796103$var$getModelAnsi(model, $019f9e46ac796103$var$levelMapping[level], "color", ...arguments_), (0, $b4459cb5baeb3567$export$2e2bcd8739ae039).color.close, this[$019f9e46ac796103$var$STYLER]);
-                return $019f9e46ac796103$var$createBuilder(this, styler, this[$019f9e46ac796103$var$IS_EMPTY]);
+                const styler = $c44461bbb7710b09$var$createStyler($c44461bbb7710b09$var$getModelAnsi(model, $c44461bbb7710b09$var$levelMapping[level], "color", ...arguments_), (0, $9c3e7af7d824669d$export$2e2bcd8739ae039).color.close, this[$c44461bbb7710b09$var$STYLER]);
+                return $c44461bbb7710b09$var$createBuilder(this, styler, this[$c44461bbb7710b09$var$IS_EMPTY]);
             };
         }
     };
     const bgModel = "bg" + model[0].toUpperCase() + model.slice(1);
-    $019f9e46ac796103$var$styles[bgModel] = {
+    $c44461bbb7710b09$var$styles[bgModel] = {
         get () {
             const { level: level } = this;
             return function(...arguments_) {
-                const styler = $019f9e46ac796103$var$createStyler($019f9e46ac796103$var$getModelAnsi(model, $019f9e46ac796103$var$levelMapping[level], "bgColor", ...arguments_), (0, $b4459cb5baeb3567$export$2e2bcd8739ae039).bgColor.close, this[$019f9e46ac796103$var$STYLER]);
-                return $019f9e46ac796103$var$createBuilder(this, styler, this[$019f9e46ac796103$var$IS_EMPTY]);
+                const styler = $c44461bbb7710b09$var$createStyler($c44461bbb7710b09$var$getModelAnsi(model, $c44461bbb7710b09$var$levelMapping[level], "bgColor", ...arguments_), (0, $9c3e7af7d824669d$export$2e2bcd8739ae039).bgColor.close, this[$c44461bbb7710b09$var$STYLER]);
+                return $c44461bbb7710b09$var$createBuilder(this, styler, this[$c44461bbb7710b09$var$IS_EMPTY]);
             };
         }
     };
 }
-const $019f9e46ac796103$var$proto = Object.defineProperties(()=>{}, {
-    ...$019f9e46ac796103$var$styles,
+const $c44461bbb7710b09$var$proto = Object.defineProperties(()=>{}, {
+    ...$c44461bbb7710b09$var$styles,
     level: {
         enumerable: true,
         get () {
-            return this[$019f9e46ac796103$var$GENERATOR].level;
+            return this[$c44461bbb7710b09$var$GENERATOR].level;
         },
         set (level) {
-            this[$019f9e46ac796103$var$GENERATOR].level = level;
+            this[$c44461bbb7710b09$var$GENERATOR].level = level;
         }
     }
 });
-const $019f9e46ac796103$var$createStyler = (open, close, parent)=>{
+const $c44461bbb7710b09$var$createStyler = (open, close, parent)=>{
     let openAll;
     let closeAll;
     if (parent === undefined) {
@@ -5291,51 +5283,51 @@ const $019f9e46ac796103$var$createStyler = (open, close, parent)=>{
         parent: parent
     };
 };
-const $019f9e46ac796103$var$createBuilder = (self, _styler, _isEmpty)=>{
+const $c44461bbb7710b09$var$createBuilder = (self, _styler, _isEmpty)=>{
     // Single argument is hot path, implicit coercion is faster than anything
     // eslint-disable-next-line no-implicit-coercion
-    const builder = (...arguments_)=>$019f9e46ac796103$var$applyStyle(builder, arguments_.length === 1 ? "" + arguments_[0] : arguments_.join(" "));
+    const builder = (...arguments_)=>$c44461bbb7710b09$var$applyStyle(builder, arguments_.length === 1 ? "" + arguments_[0] : arguments_.join(" "));
     // We alter the prototype because we must return a function, but there is
     // no way to create a function with a different prototype
-    Object.setPrototypeOf(builder, $019f9e46ac796103$var$proto);
-    builder[$019f9e46ac796103$var$GENERATOR] = self;
-    builder[$019f9e46ac796103$var$STYLER] = _styler;
-    builder[$019f9e46ac796103$var$IS_EMPTY] = _isEmpty;
+    Object.setPrototypeOf(builder, $c44461bbb7710b09$var$proto);
+    builder[$c44461bbb7710b09$var$GENERATOR] = self;
+    builder[$c44461bbb7710b09$var$STYLER] = _styler;
+    builder[$c44461bbb7710b09$var$IS_EMPTY] = _isEmpty;
     return builder;
 };
-const $019f9e46ac796103$var$applyStyle = (self, string)=>{
-    if (self.level <= 0 || !string) return self[$019f9e46ac796103$var$IS_EMPTY] ? "" : string;
-    let styler = self[$019f9e46ac796103$var$STYLER];
+const $c44461bbb7710b09$var$applyStyle = (self, string)=>{
+    if (self.level <= 0 || !string) return self[$c44461bbb7710b09$var$IS_EMPTY] ? "" : string;
+    let styler = self[$c44461bbb7710b09$var$STYLER];
     if (styler === undefined) return string;
     const { openAll: openAll, closeAll: closeAll } = styler;
     if (string.includes("\x1b")) while(styler !== undefined){
         // Replace any instances already present with a re-opening code
         // otherwise only the part of the string until said closing code
         // will be colored, and the rest will simply be 'plain'.
-        string = (0, $57502c2cb11a35f7$export$9300dfb554c6c407)(string, styler.close, styler.open);
+        string = (0, $3a350480b217c6be$export$9300dfb554c6c407)(string, styler.close, styler.open);
         styler = styler.parent;
     }
     // We can move both next actions out of loop, because remaining actions in loop won't have
     // any/visible effect on parts we add here. Close the styling before a linebreak and reopen
     // after next line to fix a bleed issue on macOS: https://github.com/chalk/chalk/pull/92
     const lfIndex = string.indexOf("\n");
-    if (lfIndex !== -1) string = (0, $57502c2cb11a35f7$export$ecabf4aff2e9764)(string, closeAll, openAll, lfIndex);
+    if (lfIndex !== -1) string = (0, $3a350480b217c6be$export$ecabf4aff2e9764)(string, closeAll, openAll, lfIndex);
     return openAll + string + closeAll;
 };
-Object.defineProperties($019f9e46ac796103$var$createChalk.prototype, $019f9e46ac796103$var$styles);
-const $019f9e46ac796103$var$chalk = $019f9e46ac796103$var$createChalk();
-const $019f9e46ac796103$export$8cef8185e551afa5 = $019f9e46ac796103$var$createChalk({
-    level: $019f9e46ac796103$export$8107055a758cd2bd ? $019f9e46ac796103$export$8107055a758cd2bd.level : 0
+Object.defineProperties($c44461bbb7710b09$var$createChalk.prototype, $c44461bbb7710b09$var$styles);
+const $c44461bbb7710b09$var$chalk = $c44461bbb7710b09$var$createChalk();
+const $c44461bbb7710b09$export$8cef8185e551afa5 = $c44461bbb7710b09$var$createChalk({
+    level: $c44461bbb7710b09$export$8107055a758cd2bd ? $c44461bbb7710b09$export$8107055a758cd2bd.level : 0
 });
-var $019f9e46ac796103$export$2e2bcd8739ae039 = $019f9e46ac796103$var$chalk;
+var $c44461bbb7710b09$export$2e2bcd8739ae039 = $c44461bbb7710b09$var$chalk;
 
 
-var $2256419c9bc73307$exports = {};
+var $6359e9f586084af1$exports = {};
 "use strict";
 
 
 
-var $k7DM2 = parcelRequire("k7DM2");
+var $h91fL = parcelRequire("h91fL");
 
 
 
@@ -5350,10 +5342,10 @@ var $k7DM2 = parcelRequire("k7DM2");
  * @param {Object} `options` (optional) Options to use with all prompts.
  * @param {Object} `answers` (optional) Answers object to initialize with.
  * @api public
- */ class $2256419c9bc73307$var$Enquirer extends $jvxZj$events {
+ */ class $6359e9f586084af1$var$Enquirer extends $4hQOU$events {
     constructor(options, answers){
         super();
-        this.options = $k7DM2.merge({}, options);
+        this.options = $h91fL.merge({}, options);
         this.answers = {
             ...answers
         };
@@ -5372,11 +5364,11 @@ var $k7DM2 = parcelRequire("k7DM2");
    * @return {Object} Returns the Enquirer instance
    * @api public
    */ register(type, fn) {
-        if ($k7DM2.isObject(type)) {
+        if ($h91fL.isObject(type)) {
             for (let key of Object.keys(type))this.register(key, type[key]);
             return this;
         }
-        $jvxZj$assert.equal(typeof fn, "function", "expected a function");
+        $4hQOU$assert.equal(typeof fn, "function", "expected a function");
         const name = type.toLowerCase();
         if (fn.prototype instanceof this.Prompt) this.prompts[name] = fn;
         else this.prompts[name] = fn(this.Prompt, this);
@@ -5404,7 +5396,7 @@ var $k7DM2 = parcelRequire("k7DM2");
    */ async prompt(questions = []) {
         for (let question of [].concat(questions))try {
             if (typeof question === "function") question = await question.call(this);
-            await this.ask($k7DM2.merge({}, this.options, question));
+            await this.ask($h91fL.merge({}, this.options, question));
         } catch (err) {
             return Promise.reject(err);
         }
@@ -5412,13 +5404,13 @@ var $k7DM2 = parcelRequire("k7DM2");
     }
     async ask(question) {
         if (typeof question === "function") question = await question.call(this);
-        let opts = $k7DM2.merge({}, this.options, question);
+        let opts = $h91fL.merge({}, this.options, question);
         let { type: type, name: name } = question;
-        let { set: set, get: get } = $k7DM2;
+        let { set: set, get: get } = $h91fL;
         if (typeof type === "function") type = await type.call(this, question, this.answers);
         if (!type) return this.answers[name];
         if (type === "number") type = "numeral";
-        $jvxZj$assert(this.prompts[type], `Prompt "${type}" is not registered`);
+        $4hQOU$assert(this.prompts[type], `Prompt "${type}" is not registered`);
         let prompt = new this.prompts[type](opts);
         let value = get(this.answers, name);
         prompt.state.answers = this.answers;
@@ -5473,13 +5465,13 @@ var $k7DM2 = parcelRequire("k7DM2");
         this._Prompt = value;
     }
     static get Prompt() {
-        return this._Prompt || (parcelRequire("aQOyv"));
+        return this._Prompt || (parcelRequire("3fCUp"));
     }
     static get prompts() {
-        return (parcelRequire("f40NT"));
+        return (parcelRequire("iFfp1"));
     }
     static get types() {
-        return (parcelRequire("jYXeY"));
+        return (parcelRequire("hZrYo"));
     }
     /**
    * Prompt function that takes a "question" object or array of question objects,
@@ -5508,35 +5500,35 @@ var $k7DM2 = parcelRequire("k7DM2");
             };
             return enquirer.prompt(questions);
         };
-        $k7DM2.mixinEmitter(fn, new $jvxZj$events());
+        $h91fL.mixinEmitter(fn, new $4hQOU$events());
         return fn;
     }
 }
-$k7DM2.mixinEmitter($2256419c9bc73307$var$Enquirer, new $jvxZj$events());
-const $2256419c9bc73307$var$prompts = $2256419c9bc73307$var$Enquirer.prompts;
-for (let name of Object.keys($2256419c9bc73307$var$prompts)){
+$h91fL.mixinEmitter($6359e9f586084af1$var$Enquirer, new $4hQOU$events());
+const $6359e9f586084af1$var$prompts = $6359e9f586084af1$var$Enquirer.prompts;
+for (let name of Object.keys($6359e9f586084af1$var$prompts)){
     let key = name.toLowerCase();
-    let run = (options)=>new $2256419c9bc73307$var$prompts[name](options).run();
-    $2256419c9bc73307$var$Enquirer.prompt[key] = run;
-    $2256419c9bc73307$var$Enquirer[key] = run;
-    if (!$2256419c9bc73307$var$Enquirer[name]) Reflect.defineProperty($2256419c9bc73307$var$Enquirer, name, {
-        get: ()=>$2256419c9bc73307$var$prompts[name]
+    let run = (options)=>new $6359e9f586084af1$var$prompts[name](options).run();
+    $6359e9f586084af1$var$Enquirer.prompt[key] = run;
+    $6359e9f586084af1$var$Enquirer[key] = run;
+    if (!$6359e9f586084af1$var$Enquirer[name]) Reflect.defineProperty($6359e9f586084af1$var$Enquirer, name, {
+        get: ()=>$6359e9f586084af1$var$prompts[name]
     });
 }
-const $2256419c9bc73307$var$define = (name)=>{
-    $k7DM2.defineExport($2256419c9bc73307$var$Enquirer, name, ()=>$2256419c9bc73307$var$Enquirer.types[name]);
+const $6359e9f586084af1$var$define = (name)=>{
+    $h91fL.defineExport($6359e9f586084af1$var$Enquirer, name, ()=>$6359e9f586084af1$var$Enquirer.types[name]);
 };
-$2256419c9bc73307$var$define("ArrayPrompt");
-$2256419c9bc73307$var$define("AuthPrompt");
-$2256419c9bc73307$var$define("BooleanPrompt");
-$2256419c9bc73307$var$define("NumberPrompt");
-$2256419c9bc73307$var$define("StringPrompt");
-$2256419c9bc73307$exports = $2256419c9bc73307$var$Enquirer;
+$6359e9f586084af1$var$define("ArrayPrompt");
+$6359e9f586084af1$var$define("AuthPrompt");
+$6359e9f586084af1$var$define("BooleanPrompt");
+$6359e9f586084af1$var$define("NumberPrompt");
+$6359e9f586084af1$var$define("StringPrompt");
+$6359e9f586084af1$exports = $6359e9f586084af1$var$Enquirer;
 
 
 
-const { prompt: $ce4a91de23a7c7b5$var$prompt } = (0, (/*@__PURE__*/$parcel$interopDefault($2256419c9bc73307$exports)));
-const $ce4a91de23a7c7b5$var$promptQuestion = async (extended = {}, message = `name it:`)=>{
+const { prompt: $3b25478c8003c06a$var$prompt } = (0, (/*@__PURE__*/$parcel$interopDefault($6359e9f586084af1$exports)));
+const $3b25478c8003c06a$var$promptQuestion = async (extended = {}, message = `name it:`)=>{
     if (extended.type === "list") extended.type = "select";
     if (extended.message) message = extended.message;
     if (extended.choices && extended.choices[0].value) extended.choices = extended.choices.map((e)=>{
@@ -5546,56 +5538,56 @@ const $ce4a91de23a7c7b5$var$promptQuestion = async (extended = {}, message = `na
         };
     });
     if (extended.pageSize) extended.limit = extended.pageSize;
-    const { answer: answer } = await $ce4a91de23a7c7b5$var$prompt({
+    const { answer: answer } = await $3b25478c8003c06a$var$prompt({
         type: "input",
-        message: `${(0, $019f9e46ac796103$export$2e2bcd8739ae039).green.bold.underline(message)}`,
+        message: `${(0, $c44461bbb7710b09$export$2e2bcd8739ae039).green.bold.underline(message)}`,
         name: `answer`,
         ...extended
     });
     return answer;
 };
-var $ce4a91de23a7c7b5$export$2e2bcd8739ae039 = $ce4a91de23a7c7b5$var$promptQuestion;
+var $3b25478c8003c06a$export$2e2bcd8739ae039 = $3b25478c8003c06a$var$promptQuestion;
 
 
-const $c96ac4a5e84018b3$var$clear = ()=>{
+const $cceb8c56faaf2c4e$var$clear = ()=>{
     console.clear();
 };
-function $c96ac4a5e84018b3$var$readDir(dir) {
+function $cceb8c56faaf2c4e$var$readDir(dir) {
     return new Promise((resolve, reject)=>{
-        (0, ($parcel$interopDefault($jvxZj$fs))).readdir(dir, (err, result)=>{
+        (0, $4hQOU$fs).readdir(dir, (err, result)=>{
             if (err) return reject(err);
             return resolve(result);
         });
     });
 }
-function $c96ac4a5e84018b3$var$format(filename, fullpath) {
+function $cceb8c56faaf2c4e$var$format(filename, fullpath) {
     try {
-        return (0, ($parcel$interopDefault($jvxZj$fs))).statSync(fullpath).isDirectory() ? `${filename}` : filename;
+        return (0, $4hQOU$fs).statSync(fullpath).isDirectory() ? `${filename}` : filename;
     } catch (ex) {
         return null;
     }
 }
-function $c96ac4a5e84018b3$var$mountChoices({ folder: folder, type: type }) {
+function $cceb8c56faaf2c4e$var$mountChoices({ folder: folder, type: type }) {
     return new Promise((resolve, reject)=>{
-        $c96ac4a5e84018b3$var$readDir(folder).then((dirs)=>{
+        $cceb8c56faaf2c4e$var$readDir(folder).then((dirs)=>{
             let data = [];
             if (type === "folder") data.push({
-                name: (0, $019f9e46ac796103$export$2e2bcd8739ae039).blue.bold(`\u21A3 ${(0, ($parcel$interopDefault($jvxZj$path))).resolve(folder)}`),
-                value: `--${(0, ($parcel$interopDefault($jvxZj$path))).resolve(folder)}`
+                name: (0, $c44461bbb7710b09$export$2e2bcd8739ae039).blue.bold(`\u21A3 ${(0, $4hQOU$path).resolve(folder)}`),
+                value: `--${(0, $4hQOU$path).resolve(folder)}`
             });
             data.push({
-                name: (0, $019f9e46ac796103$export$2e2bcd8739ae039).blue.bold(`Enter custom path`),
+                name: (0, $c44461bbb7710b09$export$2e2bcd8739ae039).blue.bold(`Enter custom path`),
                 value: `~~custom`
             });
             data.push({
                 name: "..",
-                value: (0, ($parcel$interopDefault($jvxZj$path))).resolve(`${folder}/..`)
+                value: (0, $4hQOU$path).resolve(`${folder}/..`)
             });
             for(let index in dirs){
                 let file = dirs[index];
-                let fullpath = (0, ($parcel$interopDefault($jvxZj$path))).resolve(`${folder}/${file}`);
-                let name = $c96ac4a5e84018b3$var$format(file, fullpath);
-                if (type === "folder" && !(0, ($parcel$interopDefault($jvxZj$fs))).statSync(fullpath).isDirectory()) continue;
+                let fullpath = (0, $4hQOU$path).resolve(`${folder}/${file}`);
+                let name = $cceb8c56faaf2c4e$var$format(file, fullpath);
+                if (type === "folder" && !(0, $4hQOU$fs).statSync(fullpath).isDirectory()) continue;
                 data.push({
                     name: name,
                     value: fullpath,
@@ -5606,24 +5598,24 @@ function $c96ac4a5e84018b3$var$mountChoices({ folder: folder, type: type }) {
         });
     });
 }
-function $c96ac4a5e84018b3$var$getFile(config = {}) {
-    $c96ac4a5e84018b3$var$clear();
+function $cceb8c56faaf2c4e$var$getFile(config = {}) {
+    $cceb8c56faaf2c4e$var$clear();
     let { folder: folder = ".", type: type = "folder", question: question = `Choose a ${config.type === "folder" ? "folder" : "file"}` } = config;
     return new Promise((resolve)=>{
-        $c96ac4a5e84018b3$var$mountChoices({
+        $cceb8c56faaf2c4e$var$mountChoices({
             folder: folder,
             type: type
         }).then(async (choices)=>{
-            const dir = await (0, $ce4a91de23a7c7b5$export$2e2bcd8739ae039)({
+            const dir = await (0, $3b25478c8003c06a$export$2e2bcd8739ae039)({
                 type: "autocomplete",
                 choices: choices
             }, question);
             if (type === "folder" && dir.startsWith("--")) resolve(dir.replace("--", ""));
-            else if (type !== "folder" && !(0, ($parcel$interopDefault($jvxZj$fs))).statSync(dir).isDirectory()) resolve(dir);
-            else if (dir.startsWith("~~custom")) resolve(await (0, $ce4a91de23a7c7b5$export$2e2bcd8739ae039)({
+            else if (type !== "folder" && !(0, $4hQOU$fs).statSync(dir).isDirectory()) resolve(dir);
+            else if (dir.startsWith("~~custom")) resolve(await (0, $3b25478c8003c06a$export$2e2bcd8739ae039)({
                 type: "input"
             }, "Enter custom path"));
-            else resolve($c96ac4a5e84018b3$var$getFile({
+            else resolve($cceb8c56faaf2c4e$var$getFile({
                 ...config,
                 folder: dir
             }));
@@ -5632,6 +5624,7 @@ function $c96ac4a5e84018b3$var$getFile(config = {}) {
         });
     });
 }
-var $c96ac4a5e84018b3$export$2e2bcd8739ae039 = $c96ac4a5e84018b3$var$getFile;
+var $cceb8c56faaf2c4e$export$2e2bcd8739ae039 = $cceb8c56faaf2c4e$var$getFile;
 
 
+export {$cceb8c56faaf2c4e$export$2e2bcd8739ae039 as default};

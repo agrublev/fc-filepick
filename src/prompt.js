@@ -1,6 +1,6 @@
-const { prompt } = require("enquirer");
-const chalk = require("chalk");
-
+import enquirer from "enquirer";
+import chalk from "fc-chalk";
+const { prompt } = enquirer;
 const promptQuestion = async (extended = {}, message = `name it:`) => {
     if (extended.type === "list") {
         extended.type = "select";
@@ -9,7 +9,7 @@ const promptQuestion = async (extended = {}, message = `name it:`) => {
         message = extended.message;
     }
     if (extended.choices && extended.choices[0].value) {
-        extended.choices = extended.choices.map(e => {
+        extended.choices = extended.choices.map((e) => {
             return { message: e.name, value: e.value };
         });
     }
@@ -20,9 +20,9 @@ const promptQuestion = async (extended = {}, message = `name it:`) => {
         type: "input",
         message: `${chalk.green.bold.underline(message)}`,
         name: `answer`,
-        ...extended
+        ...extended,
     });
     return answer;
 };
 
-module.exports = promptQuestion;
+export default promptQuestion;
