@@ -1,13 +1,11 @@
 {
-    "presets": ["@babel/preset-env"],
-    "plugins": [
-        ["@babel/plugin-syntax-class-properties"],
+    "presets": [
         [
-            "@babel/plugin-proposal-class-properties",
+            "@babel/preset-env",
             {
                 "loose": true
             }
-        ],
-        "@babel/plugin-transform-runtime"
-    ]
+        ]
+    ],
+    "plugins": ["@babel/plugin-transform-runtime"]
 }
