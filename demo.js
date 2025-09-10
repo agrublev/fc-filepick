@@ -1,5 +1,5 @@
-const getFile = require("./src/index");
-const chalk = require("chalk");
+import chalk from "chalk";
+import getFile from "./src/index.mjs";
 
 async function runDemo() {
   console.log(chalk.bold.yellow("--- FC-FILEPICK DEMO ---"));

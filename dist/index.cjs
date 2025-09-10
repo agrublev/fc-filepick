@@ -145,4 +145,4 @@ function getFile() {
   });
 }
 var _default = exports["default"] = getFile;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.cjs.map

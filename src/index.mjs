@@ -1,7 +1,7 @@
-const fs = require("fs");
-const path = require("path");
-const chalk = require("chalk");
-const prompt = require("./prompt");
+import chalk from "chalk";
+import fs from "fs";
+import path from "path";
+import prompt from "./prompt.mjs";
 
 const clear = () => {
   console.clear();
@@ -103,4 +103,4 @@ function getFile(config = {}) {
   });
 }
 
-module.exports = getFile;
+export default getFile;
