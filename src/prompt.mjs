@@ -1,5 +1,5 @@
-const { prompt } = require("enquirer");
-const chalk = require("chalk");
+import chalk from "chalk";
+import { prompt } from "enquirer";
 
 const promptQuestion = async (extended = {}, message = `name it:`) => {
     if (extended.type === "list") {
@@ -25,4 +25,4 @@ const promptQuestion = async (extended = {}, message = `name it:`) => {
     return answer;
 };
 
-module.exports = promptQuestion;
+export default promptQuestion;

@@ -1,5 +1,5 @@
-// const getFile = require("./src/index");
-const getFile = require("./dist");
+// import getFile from "./src/index.js";
+import getFile from "./dist/index.js";
 
 (async () => {
   let ff = await getFile();
