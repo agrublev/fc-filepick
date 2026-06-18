@@ -9,7 +9,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .idea
-,parcel-cache
+.parcel-cache
 # Runtime data
 pids
 *.pid
