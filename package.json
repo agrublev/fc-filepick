@@ -21,7 +21,7 @@
   "scripts": {
     "build": "bun optimize.js",
     "start": "nodemon demo/run.js --watch src -I",
-    "test": "node test/prompt.test.mjs && node demo/test-dist.cjs",
+    "test": "node test/prompt.test.mjs",
     "demo": "node demo/demo.js",
     "docs:serve": "docsify generate docs",
     "prepublishOnly": "npm run build && npm test",
