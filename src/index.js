@@ -1,7 +1,7 @@
 import chalk from "chalk";
 import fs from "fs";
 import path from "path";
-import prompt from "./prompt.mjs";
+import prompt from "./prompt.js";
 
 const clear = () => {
   console.clear();
@@ -28,21 +28,21 @@ function format(filename, fullpath) {
 
 function mountChoices({ folder, type }) {
   return new Promise((resolve, reject) => {
-    readDir(folder).then(dirs => {
+    readDir(folder).then((dirs) => {
       let data = [];
       if (type === "folder") {
         data.push({
           name: chalk.blue.bold(`${path.resolve(folder)}`),
-          value: `--${path.resolve(folder)}`
+          value: `--${path.resolve(folder)}`,
         });
       }
       data.push({
         name: chalk.blue.bold(`Enter custom path`),
-        value: `~~custom`
+        value: `~~custom`,
       });
       data.push({
         name: "..",
-        value: path.resolve(`${folder}/..`)
+        value: path.resolve(`${folder}/..`),
       });
       for (let index in dirs) {
         let file = dirs[index];
@@ -54,7 +54,7 @@ function mountChoices({ folder, type }) {
         data.push({
           name: name,
           value: fullpath,
-          short: fullpath
+          short: fullpath,
         });
       }
       return resolve(data);
@@ -68,15 +68,15 @@ function getFile(config = {}) {
   let {
     folder = ".",
     type = "folder",
-    question = `Choose a ${config.type === "folder" ? "folder" : "file"}`
+    question = `Choose a ${config.type === "folder" ? "folder" : "file"}`,
   } = config;
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     mountChoices({ folder, type })
-      .then(async choices => {
+      .then(async (choices) => {
         const dir = await prompt(
           {
             type: "autocomplete",
-            choices: choices
+            choices: choices,
           },
           question
         );
@@ -88,7 +88,7 @@ function getFile(config = {}) {
           resolve(
             await prompt(
               {
-                type: "input"
+                type: "input",
               },
               "Enter custom path"
             )
@@ -97,7 +97,7 @@ function getFile(config = {}) {
           resolve(getFile({ ...config, folder: dir }));
         }
       })
-      .catch(e => {
+      .catch((e) => {
         resolve(false);
       });
   });

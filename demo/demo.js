@@ -1,5 +1,5 @@
 import chalk from "chalk";
-import getFile from "./src/index.mjs";
+import getFile from "../src/index.js";
 
 async function runDemo() {
   console.log(chalk.bold.yellow("--- FC-FILEPICK DEMO ---"));

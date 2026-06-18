@@ -12,7 +12,7 @@
 
 # FC-Filepick
 
-A file picker made for node cli applications using enquirer.
+A file picker made for node cli applications using inquirer.
 
 <img width="479" alt="image" src="https://user-images.githubusercontent.com/801433/206047869-1e6a846b-6167-427e-80e7-d0e9ec14b7b0.png">
 

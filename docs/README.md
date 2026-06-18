@@ -102,19 +102,3 @@ npm run demo
 
 This will run the `demo.js` script, which showcases how to use the file picker to select a folder and then a file.
 
-## Deployment with Surge.sh
-
-The documentation website is built with [docsify](https://docsify.js.org/#/) and can be easily deployed to [Surge.sh](https://surge.sh/), a static web publishing service.
-
-To deploy the documentation from your local machine:
-
-1.  Make sure you have `surge` installed globally. If not, run:
-    ```bash
-    npm install -g surge
-    ```
-2.  Navigate to the root directory of this project in your terminal.
-3.  Run the following command:
-    ```bash
-    surge docs/
-    ```
-4.  Surge will then deploy the contents of the `docs` folder and provide you with a unique URL for your live site.

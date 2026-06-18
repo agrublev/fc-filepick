@@ -1,6 +1,1 @@
-- [Home](/)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Options](#options)
-- [Demo](#demo)
-- [Deployment](#deployment-with-surgesh)
+- [README](README.md)

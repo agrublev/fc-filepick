@@ -8,7 +8,8 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
+.idea
+,parcel-cache
 # Runtime data
 pids
 *.pid
